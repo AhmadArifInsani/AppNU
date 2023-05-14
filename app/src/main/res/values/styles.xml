@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Login" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary"> @color/PrimaryColor</item>
+        <item name="colorSecondary"> @color/SecondaryColor</item>
+        <item name="colorAccent"> @color/BlackColor</item>
+        <item name="colorOnSecondary"> @color/WhiteColor</item>
+    </style>
+</resources>
