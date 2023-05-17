@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="PrimaryColor">#50C2C9</color>
-    <color name="SecondaryColor">#55BBAF</color>
     <color name="BlackColor">#000000</color>
     <color name="WhiteColor">#FFFFFF</color>
     <color name="cream">#FFF8BA</color>
     <color name="grey">#D9D9D9</color>
-    <color name="blue">#2499DB</color>
 
 </resources>
