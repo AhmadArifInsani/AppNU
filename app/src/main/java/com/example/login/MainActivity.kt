@@ -8,18 +8,18 @@ import android.text.Html
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
-import com.example.login.databinding.ImagesBinding
+import com.example.login.databinding.HomeBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding : ImagesBinding
+    private lateinit var binding : HomeBinding
     private lateinit var adapter: ImageSliderAdapter
     private val list = ArrayList<ImageData>()
     private lateinit var dots: ArrayList<TextView>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ImagesBinding.inflate(layoutInflater)
+        binding = HomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         list.add(
