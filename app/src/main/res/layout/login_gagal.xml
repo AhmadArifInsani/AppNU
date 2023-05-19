@@ -7,97 +7,127 @@
     tools:context=".MainActivity"
     tools:ignore="MissingClass">
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <RelativeLayout
+        android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:src="@drawable/bar"
+        android:background="@drawable/footer_radius"
+        android:gravity="center_horizontal"
+        android:paddingBottom="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/ipnu"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_ipnu"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/ippnu"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/ipnu">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_ippnu"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/nu"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/ippnu">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_nu"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/fatayat"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/muslimat">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_fatayat"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/ansor"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/ipnu">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_ansor"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/banser"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/ippnu"
+            android:layout_toEndOf="@id/ansor">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_banser"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/muslimat"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/nu"
+            android:layout_toEndOf="@id/banser">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_muslimat"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/pergunu"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/fatayat"
+            android:layout_toEndOf="@id/muslimat">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_pergunu"/>
+        </RelativeLayout>
 
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="35dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ipnu" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_fatayat" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="35dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView12"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ippnu" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="35dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView10"
-        app:layout_constraintStart_toEndOf="@+id/imageView11"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_muslimat" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        app:srcCompat="@drawable/logo_ansor" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        app:srcCompat="@drawable/logo_pergunu" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView16"
-        app:layout_constraintStart_toEndOf="@+id/imageView13"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
-        app:srcCompat="@drawable/logo_banser" />
-
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView14"
-        app:layout_constraintStart_toEndOf="@+id/imageView15"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12"
-        app:srcCompat="@drawable/logo_nu" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/textView"
@@ -111,7 +141,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/background" />
 
     <TextView
         android:id="@+id/textView1"
@@ -130,15 +160,14 @@
 
     <EditText
         android:id="@+id/popup"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:background="@drawable/rectangle_42"
+        android:background="@drawable/popup"
         android:fontFamily="@font/poppinsregular"
         android:minHeight="48dp"
-        android:paddingLeft="10sp"
-        android:paddingTop="3dp"
-        android:paddingEnd="10dp"
+        android:padding="10dp"
+        android:gravity="center_vertical"
         android:text="Email atau Pssword salah !!"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -147,31 +176,30 @@
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rectangle_1"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/menu_login"
         android:drawableEnd="@drawable/ic_email"
         android:fontFamily="@font/poppinsregular"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="text"
         android:minHeight="48dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="3dp"
-        android:paddingEnd="10dp"
+        android:padding="10dp"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup" />
 
     <Button
         android:id="@+id/login"
-        android:layout_width="285dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="105dp"
         android:background="@drawable/button"
         android:fontFamily="@font/poppinsbold"
-        android:paddingTop="3dp"
+        android:gravity="center"
         android:text="LOGIN"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -181,18 +209,17 @@
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@drawable/rectangle_1"
+        android:background="@drawable/menu_login"
         android:drawableEnd="@drawable/ic_password"
         android:fontFamily="@font/poppinsregular"
         android:hint="Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="3dp"
-        android:paddingEnd="10dp"
+        android:padding="10dp"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />

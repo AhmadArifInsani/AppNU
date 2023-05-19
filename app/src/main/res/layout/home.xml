@@ -56,8 +56,9 @@
         app:layout_constraintTop_toBottomOf="@+id/view_pager" />
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="494dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/background_white"
         android:gravity="center_horizontal"
@@ -252,6 +253,7 @@
             android:layout_marginTop="20dp"
             android:layout_toEndOf="@id/data_anggota"
             android:gravity="center">
+
             <LinearLayout
                 android:id="@+id/menu_alumni"
                 android:layout_width="90dp"
@@ -259,12 +261,14 @@
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/menu"
                 android:gravity="center">
+
                 <ImageView
                     android:id="@+id/img_alumni"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/alumni" />
             </LinearLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -278,4 +282,46 @@
         </RelativeLayout>
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:background="@color/WhiteColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/header"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:layout_marginTop="22dp">
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:background="@drawable/buton_home">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_home"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
