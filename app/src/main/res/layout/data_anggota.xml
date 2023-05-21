@@ -46,21 +46,131 @@
         </LinearLayout>
     </RelativeLayout>
     <LinearLayout
+        android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@drawable/menu"
+        android:background="@drawable/menu_abu_radius20"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
         android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/footer_data_anggota">
 
         <SearchView
-            android:layout_width="340dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:layout_marginRight="10dp"
             android:iconifiedByDefault="false"
             android:queryHint="Cari Nama" />
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/menu_abu_radius10"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search">
+
+            <RelativeLayout
+                android:id="@+id/profil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="20dp">
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/profil"/>
+            </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@id/profil">
+
+            <TextView
+                android:id="@+id/text_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Ahmad Arif Insani"
+                android:textColor="@color/BlackColor" />
+            <ImageView
+                android:id="@+id/line_1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@id/text_nama"
+                android:src="@drawable/line"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/line_1"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/text_tanggal_lahir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26 September 1997"
+                    android:textColor="@color/BlackColor"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:id="@+id/text_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="arifinsani40@gmail.com"
+                    android:layout_below="@id/text_tanggal_lahir"
+                    android:textColor="@color/BlackColor"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:id="@+id/text_pimpinan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PR Plosokerep"
+                    android:textColor="@color/BlackColor"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/text_email"
+                    android:fontFamily="@font/poppinsregular"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/nama"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/profil"
+            android:gravity="center"
+            android:background="@drawable/menu_grey_radius10">
+            <TextView
+                android:id="@+id/text_nomor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+62 897-8768-8768"
+                android:textColor="@color/BlackColor"
+                android:fontFamily="@font/poppinsregular"/>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -62,7 +62,7 @@
             android:layout_width="165dp"
             android:layout_height="200dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/menu_organisasi"
+            android:background="@drawable/menu_abu_radius10"
             android:paddingTop="5dp">
 
             <ImageView
@@ -96,7 +96,7 @@
             android:layout_width="165dp"
             android:layout_height="200dp"
             android:layout_toEndOf="@id/background_1"
-            android:background="@drawable/menu_organisasi"
+            android:background="@drawable/menu_abu_radius10"
             android:paddingTop="5dp">
 
             <ImageView
@@ -142,7 +142,7 @@
             android:layout_width="165dp"
             android:layout_height="200dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/menu_organisasi"
+            android:background="@drawable/menu_abu_radius10"
             android:paddingTop="5dp">
 
             <ImageView
@@ -176,7 +176,7 @@
             android:layout_width="165dp"
             android:layout_height="200dp"
             android:layout_toEndOf="@id/background_3"
-            android:background="@drawable/menu_organisasi"
+            android:background="@drawable/menu_abu_radius10"
             android:paddingTop="5dp">
 
             <ImageView
