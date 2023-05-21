@@ -52,7 +52,7 @@
         android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/menu"
+        android:background="@drawable/menu_organisasi"
         app:layout_constraintTop_toBottomOf="@+id/footer_berita_kegiatan">
 
         <RelativeLayout
@@ -65,7 +65,7 @@
                 android:id="@+id/img_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/image_1"
+                android:src="@drawable/image_organisasi_1"
                 />
         </RelativeLayout>
         <RelativeLayout
@@ -99,7 +99,7 @@
         android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/menu"
+        android:background="@drawable/menu_organisasi"
         app:layout_constraintTop_toBottomOf="@+id/background_organisasi_1">
 
         <RelativeLayout
@@ -112,7 +112,7 @@
                 android:id="@+id/img_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/image_2"
+                android:src="@drawable/image_organisasi_2"
                 />
         </RelativeLayout>
         <RelativeLayout

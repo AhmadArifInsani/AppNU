@@ -15,6 +15,12 @@
         android:theme="@style/Theme.Login"
         tools:targetApi="31">
         <activity
+            android:name=".DataAnggota"
+            android:exported="false" />
+        <activity
+            android:name=".SosialMedia"
+            android:exported="false" />
+        <activity
             android:name=".Organisasi1"
             android:exported="false" />
         <activity

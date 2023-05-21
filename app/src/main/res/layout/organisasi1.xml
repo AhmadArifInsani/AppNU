@@ -45,7 +45,7 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout2"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_margin="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,21 +53,23 @@
         app:layout_constraintTop_toBottomOf="@+id/footer_berita_kegiatan">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/image_1" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_organisasi_1" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:gravity="center_horizontal"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
         <TextView
             android:id="@+id/text_judul"
-            android:layout_width="350dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"

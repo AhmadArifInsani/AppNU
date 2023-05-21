@@ -21,18 +21,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView1"
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="1dp"
-        android:minWidth="70dp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="80dp"
+        android:gravity="center"
+        android:background="@drawable/background_profil"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profil" />
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="650dp"
+            android:layout_height="65dp"
+            android:minWidth="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/person" />
+    </RelativeLayout>
 
 
     <androidx.viewpager2.widget.ViewPager2
@@ -41,9 +49,10 @@
         android:layout_height="132dp"
         app:layout_constraintCircleRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3" />
 
     <LinearLayout
         android:id="@+id/indikator"
@@ -65,7 +74,7 @@
         android:paddingTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/indikator">
+        app:layout_constraintTop_toBottomOf="@id/indikator">
 
         <RelativeLayout
             android:id="@+id/organisasi"
@@ -285,7 +294,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="104dp"
+        android:layout_height="94dp"
         android:background="@color/WhiteColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -293,7 +302,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true">
             <ImageView
                 android:layout_width="match_parent"
@@ -306,7 +315,7 @@
             android:layout_height="70dp"
             android:layout_alignParentTop="true"
             android:gravity="center"
-            android:layout_marginTop="22dp">
+            android:layout_marginTop="15dp">
             <LinearLayout
                 android:layout_width="70dp"
                 android:layout_height="70dp"
