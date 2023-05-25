@@ -51,9 +51,10 @@
     </RelativeLayout>
     <androidx.cardview.widget.CardView
         android:id="@+id/pedoman_administrasi"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         app:cardCornerRadius="15dp"
+        android:layout_marginHorizontal="20dp"
         app:cardBackgroundColor="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +75,7 @@
                 android:gravity="center_vertical"
                 android:padding="10dp"
                 android:textColor="@color/BlackColor"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -82,14 +83,15 @@
                 android:background="@drawable/button_view"
                 android:text="View"
                 android:textColor="@color/WhiteColor"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 tools:ignore="TouchTargetSizeCheck"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/surat_rekom"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,7 +113,7 @@
                 android:gravity="center_vertical"
                 android:padding="10dp"
                 android:textColor="@color/BlackColor"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -119,14 +121,15 @@
                 android:background="@drawable/button_view"
                 android:text="View"
                 android:textColor="@color/WhiteColor"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/pengajuan_sk"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -148,7 +151,7 @@
                 android:gravity="center_vertical"
                 android:padding="10dp"
                 android:textColor="@color/BlackColor"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -156,7 +159,7 @@
                 android:background="@drawable/button_view"
                 android:text="View"
                 android:textColor="@color/WhiteColor"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 tools:ignore="TouchTargetSizeCheck"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

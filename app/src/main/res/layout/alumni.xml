@@ -104,6 +104,7 @@
                 android:layout_marginLeft="5dp"
                 android:gravity="center_vertical"
                 android:fontFamily="@font/poppinsbold"
+                android:textSize="14sp"
                 android:text="Ahmad Arif Insani"
                 android:textColor="@color/BlackColor" />
             <RelativeLayout
@@ -118,6 +119,7 @@
                     android:layout_marginLeft="5dp"
                     android:text="PR Plosokerep"
                     android:gravity="center"
+                    android:textSize="14sp"
                     android:textColor="@color/BlackColor"
                     android:fontFamily="@font/poppinsregular"/>
                 <TextView
@@ -126,6 +128,7 @@
                     android:layout_marginLeft="10dp"
                     android:paddingHorizontal="5dp"
                     android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_toEndOf="@id/text_pimpinan"
                     android:text="2020-2022"
                     android:textColor="@color/BlackColor"
@@ -157,6 +160,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="26 September 1997"
+                    android:textSize="14sp"
                     android:textColor="@color/BlackColor"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/poppinsregular"/>
@@ -167,6 +171,7 @@
                     android:text="arifinsani40@gmail.com"
                     android:layout_below="@id/text_tanggal_lahir"
                     android:textColor="@color/BlackColor"
+                    android:textSize="14sp"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/poppinsregular"/>
 
@@ -190,6 +195,7 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="7dp"
                 android:text="+62 897-8768-8768"
+                android:textSize="15sp"
                 android:gravity="center_vertical"
                 android:textColor="@color/BlackColor"
                 android:fontFamily="@font/poppinsregular"/>
@@ -198,6 +204,157 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="10dp"
                 android:layout_toEndOf="@id/text_nomor">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/logo_whatsapp"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/background_data_anggota_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/menu_abu_radius10"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/background_data_anggota">
+
+        <RelativeLayout
+            android:id="@+id/profil_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="20dp">
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="120dp"
+                android:background="@drawable/profil"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/nama_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@id/profil_1">
+
+            <TextView
+                android:id="@+id/text_nama_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Ahmad Arif Insani"
+                android:textColor="@color/BlackColor" />
+            <RelativeLayout
+                android:id="@+id/layout_masa_jabatan_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_nama_1">
+                <TextView
+                    android:id="@+id/text_pimpinan_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="PR Plosokerep"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/BlackColor"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:paddingHorizontal="5dp"
+                    android:gravity="center"
+                    android:layout_toEndOf="@id/text_pimpinan_1"
+                    android:text="2020-2022"
+                    android:textSize="14sp"
+                    android:textColor="@color/BlackColor"
+                    android:fontFamily="@font/poppinsregular"
+                    android:background="@drawable/menu_masa_jabatan"
+                    />
+
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/line_1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@id/layout_masa_jabatan_1"
+                android:src="@drawable/line"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/line_1"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/text_tanggal_lahir_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="26 September 1997"
+                    android:textColor="@color/BlackColor"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:id="@+id/text_email_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="arifinsani40@gmail.com"
+                    android:layout_below="@id/text_tanggal_lahir_1"
+                    android:textColor="@color/BlackColor"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/poppinsregular"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/nama_1"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@id/profil_1"
+            android:background="@drawable/menu_grey_radius10">
+            <TextView
+                android:id="@+id/text_nomor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="7dp"
+                android:textSize="15sp"
+                android:text="+62 897-8768-8768"
+                android:gravity="center_vertical"
+                android:textColor="@color/BlackColor"
+                android:fontFamily="@font/poppinsregular"/>
+            <RelativeLayout
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/text_nomor_1">
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"

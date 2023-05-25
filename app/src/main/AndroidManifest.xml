@@ -15,6 +15,12 @@
         android:theme="@style/Theme.Login"
         tools:targetApi="31">
         <activity
+            android:name=".EditProfil"
+            android:exported="false" />
+        <activity
+            android:name=".Profil"
+            android:exported="false" />
+        <activity
             android:name=".Alumni"
             android:exported="false" />
         <activity
