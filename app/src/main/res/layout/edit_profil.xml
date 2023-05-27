@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditProfil"
-    android:background="@color/WhiteColor">
+    android:background="@color/WhiteColor"
+    tools:context=".EditProfil">
     <RelativeLayout
         android:id="@+id/footer_edit_profil"
         android:layout_width="match_parent"

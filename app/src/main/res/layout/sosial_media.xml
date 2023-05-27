@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SosialMedia"
-    android:background="@color/WhiteColor">
-
+    android:background="@color/WhiteColor"
+    tools:context=".SosialMedia">
     <RelativeLayout
         android:id="@+id/footer_materi"
         android:layout_width="match_parent"
@@ -207,5 +206,4 @@
         </RelativeLayout>
 
     </RelativeLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profil"
-    android:background="@color/WhiteColor">
+    android:background="@color/WhiteColor"
+    tools:context=".Profil">
     <RelativeLayout
         android:id="@+id/footer_profil"
         android:layout_width="match_parent"
@@ -220,4 +220,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/poster_event" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/WhiteColor"
     tools:context=".Alumni">
     <RelativeLayout
         android:id="@+id/footer_data_anggota"
@@ -85,7 +86,7 @@
             <ImageView
                 android:layout_width="95dp"
                 android:layout_height="120dp"
-                android:background="@drawable/profil"/>
+                android:background="@drawable/foto_profil"/>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/nama"
@@ -239,7 +240,7 @@
             <ImageView
                 android:layout_width="95dp"
                 android:layout_height="120dp"
-                android:background="@drawable/profil"/>
+                android:background="@drawable/foto_profil"/>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/nama_1"
@@ -369,4 +370,5 @@
 
 
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

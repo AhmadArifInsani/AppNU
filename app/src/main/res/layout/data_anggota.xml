@@ -77,17 +77,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/search">
 
-            <RelativeLayout
-                android:id="@+id/profil"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_margin="20dp">
-                <ImageView
-                    android:layout_width="95dp"
-                    android:layout_height="120dp"
-                    android:background="@drawable/profil"/>
-            </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="120dp"
+                android:background="@drawable/foto_profil" />
+        </RelativeLayout>
         <RelativeLayout
             android:id="@+id/nama"
             android:layout_width="match_parent"
@@ -213,7 +214,7 @@
             <ImageView
                 android:layout_width="95dp"
                 android:layout_height="120dp"
-                android:background="@drawable/profil"/>
+                android:background="@drawable/foto_profil"/>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/nama_1"

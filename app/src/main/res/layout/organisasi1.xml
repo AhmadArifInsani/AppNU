@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/WhiteColor"
     tools:context=".Organisasi1">
-
     <RelativeLayout
         android:id="@+id/footer_berita_kegiatan"
         android:layout_width="match_parent"
@@ -84,6 +84,4 @@
             android:layout_marginTop="10dp"/>
 
     </RelativeLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

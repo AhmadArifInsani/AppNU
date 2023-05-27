@@ -15,13 +15,16 @@
         android:theme="@style/Theme.Login"
         tools:targetApi="31">
         <activity
-            android:name=".BeritaSaya"
-            android:exported="false" />
-        <activity
             android:name=".EditProfil"
             android:exported="false" />
         <activity
-            android:name=".Profil"
+            android:name=".BeritaSaya1"
+            android:exported="false" />
+        <activity
+            android:name=".BeritaSaya"
+            android:exported="false" />
+        <activity
+            android:name=".Organisasi1"
             android:exported="false" />
         <activity
             android:name=".Alumni"
@@ -33,29 +36,37 @@
             android:name=".SosialMedia"
             android:exported="false" />
         <activity
-            android:name=".Organisasi1"
-            android:exported="false" />
-        <activity
             android:name=".Administrasi"
             android:exported="false" />
         <activity
-            android:name=".Home"
+            android:name=".Kaderisasi"
             android:exported="false" />
         <activity
             android:name=".Organisasi"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Profil"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".Register"
+            android:exported="true"
+            android:label="Register" />
+        <activity
+            android:name=".Login"
+            android:exported="true"
+            android:label="Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Home"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
