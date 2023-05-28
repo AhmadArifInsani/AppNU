@@ -16,12 +16,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <LinearLayout
-            android:id="@+id/back"
+            android:id="@+id/kembali"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:padding="3dp">
             <ImageView
+                android:id="@+id/back"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/ic_back" />
@@ -31,7 +32,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_marginLeft="10dp"
-            android:layout_toEndOf="@id/back">
+            android:layout_toEndOf="@id/kembali">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
