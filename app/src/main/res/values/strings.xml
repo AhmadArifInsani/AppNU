@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AppNU</string>
+    <string name="label_baca_selengkapnya">Baca Selengkapnya</string>
+    <string name="label_divider">\u0020|\u0020</string>
+    <string name="label_deskripsi_berita">Deskripsi</string>
+    <string name="label_foto_berita">Foto</string>
+    <string name="label_judul_berita">Judul</string>
+    <string name="label_colon">:</string>
+    <string name="action_simpan">Simpan</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_hapus">Hapus</string>
 </resources>
