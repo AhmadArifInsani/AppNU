@@ -5,86 +5,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home"
-    android:orientation="vertical"
     android:background="@color/cream">
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_60sdp"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/poppinsbold"
         android:text="AppNU"
+        android:gravity="center_vertical"
         android:textColor="@color/BlackColor"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="80dp"
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="1dp"
-        android:minWidth="70dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="80dp"
+        android:gravity="center"
+        android:background="@drawable/background_profil"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profil" />
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:minWidth="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/person" />
+    </RelativeLayout>
 
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager"
-        android:layout_width="320dp"
-        android:layout_height="132dp"
-        app:layout_constraintCircleRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
 
     <LinearLayout
-        android:id="@+id/indikator"
+        android:id="@+id/layout_slider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_pager" />
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout3">
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/slide"
+            android:layout_width="@dimen/_290sdp"
+            android:layout_height="@dimen/_140sdp"
+            app:iss_auto_cycle="true"
+            app:iss_delay="0"
+            app:iss_error_image="@drawable/ic_launcher_background"
+            app:iss_period="1000"
+            app:iss_placeholder="@drawable/ic_launcher_foreground" />
+
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_415sdp"
         android:layout_marginTop="10dp"
         android:background="@drawable/background_white"
         android:gravity="center_horizontal"
-        android:paddingTop="20dp"
+        android:paddingTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/indikator">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_slider">
 
         <RelativeLayout
             android:id="@+id/organisasi"
-            android:layout_width="120dp"
-            android:layout_height="110dp"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_100sdp"
             android:layout_marginRight="50dp">
 
             <LinearLayout
                 android:id="@+id/menu_organisasi"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/menu"
+                android:background="@drawable/menu_abu_radius20"
                 android:gravity="center">
 
                 <ImageView
                     android:id="@+id/img_organisasi"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
                     android:src="@drawable/organisasi" />
 
             </LinearLayout>
@@ -103,23 +115,23 @@
 
         <RelativeLayout
             android:id="@+id/kaderisasi"
-            android:layout_width="120dp"
-            android:layout_height="110dp"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_100sdp"
             android:layout_toEndOf="@id/organisasi"
             android:gravity="center">
 
             <LinearLayout
                 android:id="@+id/menu_kaderisasi"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/menu"
+                android:background="@drawable/menu_abu_radius20"
                 android:gravity="center">
 
                 <ImageView
                     android:id="@+id/img_kaderisasi"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
                     android:src="@drawable/kaderisasi" />
 
             </LinearLayout>
@@ -138,24 +150,24 @@
 
         <RelativeLayout
             android:id="@+id/administrasi"
-            android:layout_width="120dp"
-            android:layout_height="110dp"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_100sdp"
             android:layout_below="@id/organisasi"
             android:layout_marginTop="20dp"
             android:layout_marginRight="50dp">
 
             <LinearLayout
                 android:id="@+id/menu_administrasi"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/menu"
+                android:background="@drawable/menu_abu_radius20"
                 android:gravity="center">
 
                 <ImageView
                     android:id="@+id/img_administrasi"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
                     android:src="@drawable/administrasi" />
 
             </LinearLayout>
@@ -174,8 +186,8 @@
 
         <RelativeLayout
             android:id="@+id/media_sosial"
-            android:layout_width="120dp"
-            android:layout_height="110dp"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_100sdp"
             android:layout_below="@+id/kaderisasi"
             android:layout_marginTop="20dp"
             android:layout_toEndOf="@id/administrasi"
@@ -183,16 +195,16 @@
 
             <LinearLayout
                 android:id="@+id/menu_media_sosial"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/menu"
+                android:background="@drawable/menu_abu_radius20"
                 android:gravity="center">
 
                 <ImageView
                     android:id="@+id/img_media_sosial"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
                     android:src="@drawable/media_sosial" />
 
             </LinearLayout>
@@ -211,24 +223,24 @@
 
         <RelativeLayout
             android:id="@+id/data_anggota"
-            android:layout_width="120dp"
-            android:layout_height="110dp"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_100sdp"
             android:layout_below="@id/administrasi"
             android:layout_marginTop="20dp"
             android:layout_marginRight="50dp">
 
             <LinearLayout
                 android:id="@+id/menu_data_anggota"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/menu"
+                android:background="@drawable/menu_abu_radius20"
                 android:gravity="center">
 
                 <ImageView
                     android:id="@+id/img_data_anggota"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
                     android:src="@drawable/data_anggota" />
 
             </LinearLayout>
@@ -247,8 +259,8 @@
 
         <RelativeLayout
             android:id="@+id/alumni"
-            android:layout_width="120dp"
-            android:layout_height="110dp"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_100sdp"
             android:layout_below="@+id/media_sosial"
             android:layout_marginTop="20dp"
             android:layout_toEndOf="@id/data_anggota"
@@ -256,16 +268,16 @@
 
             <LinearLayout
                 android:id="@+id/menu_alumni"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/menu"
+                android:background="@drawable/menu_abu_radius20"
                 android:gravity="center">
 
                 <ImageView
                     android:id="@+id/img_alumni"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
                     android:src="@drawable/alumni" />
             </LinearLayout>
 
@@ -275,51 +287,44 @@
                 android:layout_below="@id/menu_alumni"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/poppinsmedium"
-                android:text="Media Sosial"
+                android:text="Alumni"
                 android:textAlignment="center"
                 android:textColor="@color/BlackColor"
                 android:textSize="14sp" />
         </RelativeLayout>
 
     </RelativeLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="104dp"
+        android:layout_height="90dp"
         android:background="@color/WhiteColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
-
-        <LinearLayout
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_alignParentBottom="true">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:src="@drawable/header"/>
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/header" />
 
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_alignParentTop="true"
-            android:gravity="center"
-            android:layout_marginTop="22dp">
+            android:layout_height="90dp"
+            android:gravity="center">
+
             <LinearLayout
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:background="@drawable/buton_home">
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/buton_home"
+                android:gravity="center">
+
                 <ImageView
+                    android:id="@+id/image_home"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/ic_home"/>
+                    android:src="@drawable/ic_home" />
             </LinearLayout>
-
 
         </LinearLayout>
 
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity"
-    tools:ignore="MissingClass">
+    android:background="@color/WhiteColor"
+    tools:context=".Login">
 
     <RelativeLayout
         android:id="@+id/background"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/footer_radius"
         android:gravity="center_horizontal"
-        android:paddingBottom="40dp"
+        android:paddingVertical="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,108 +22,119 @@
             android:id="@+id/ipnu"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginTop="30dp"
             android:gravity="center">
+
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/logo_ipnu"/>
+                android:src="@drawable/logo_ipnu" />
 
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/ippnu"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:gravity="center"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_toEndOf="@id/ipnu">
+            android:layout_toEndOf="@id/ipnu"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/logo_ippnu"/>
+                android:src="@drawable/logo_ippnu" />
 
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/nu"
             android:layout_width="100dp"
             android:layout_height="70dp"
-            android:gravity="center"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_toEndOf="@id/ippnu">
+            android:layout_toEndOf="@id/ippnu"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
-                android:src="@drawable/logo_nu"/>
+                android:src="@drawable/logo_nu" />
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/fatayat"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:gravity="center"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_toEndOf="@id/muslimat">
+            android:layout_toEndOf="@id/muslimat"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
-                android:src="@drawable/logo_fatayat"/>
+                android:src="@drawable/logo_fatayat" />
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/ansor"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:gravity="center"
+            android:layout_below="@id/ipnu"
             android:layout_marginTop="30dp"
-            android:layout_below="@id/ipnu">
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
-                android:src="@drawable/logo_ansor"/>
+                android:src="@drawable/logo_ansor" />
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/banser"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:gravity="center"
+            android:layout_below="@id/ippnu"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
-            android:layout_below="@id/ippnu"
-            android:layout_toEndOf="@id/ansor">
+            android:layout_toEndOf="@id/ansor"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/logo_banser"/>
+                android:src="@drawable/logo_banser" />
 
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/muslimat"
             android:layout_width="100dp"
             android:layout_height="70dp"
-            android:gravity="center"
+            android:layout_below="@id/nu"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
-            android:layout_below="@id/nu"
-            android:layout_toEndOf="@id/banser">
+            android:layout_toEndOf="@id/banser"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
-                android:src="@drawable/logo_muslimat"/>
+                android:src="@drawable/logo_muslimat" />
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/pergunu"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:gravity="center"
+            android:layout_below="@id/fatayat"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
-            android:layout_below="@id/fatayat"
-            android:layout_toEndOf="@id/muslimat">
+            android:layout_toEndOf="@id/muslimat"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
-                android:src="@drawable/logo_pergunu"/>
+                android:src="@drawable/logo_pergunu" />
         </RelativeLayout>
 
 
@@ -148,65 +159,101 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
-        android:text="Belajar, Berjuang, Bertaqwa"
-        android:textStyle="italic"
-        android:textSize="10sp"
         android:fontFamily="@font/poppinsregular"
+        android:text="Belajar, Berjuang, Bertaqwa"
+        android:textSize="10sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="300dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_email"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/menu_login"
-        android:drawableEnd="@drawable/ic_email"
-        android:fontFamily="@font/poppinsregular"
-        android:hint="Email"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:gravity="center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/menu_login"
-        android:drawableEnd="@drawable/ic_password"
-        android:fontFamily="@font/poppinsregular"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center_vertical"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_email"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center_vertical"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_email"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/login"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="105dp"
         android:background="@drawable/button"
         android:fontFamily="@font/poppinsbold"
         android:gravity="center"
         android:text="LOGIN"
+        android:textColor="@color/WhiteColor"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/layout_password" />
+
+    <TextView
+        android:id="@+id/text_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Anda belum memiliki akun ?"
+        android:textColor="@color/abutua"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+    <TextView
+        android:id="@+id/button_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Daftar Sekarang"
+        android:textColor="@color/UrlBlue"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

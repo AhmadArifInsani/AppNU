@@ -16,12 +16,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <LinearLayout
-            android:id="@+id/back"
+            android:id="@+id/kembali"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:padding="3dp">
             <ImageView
+                android:id="@+id/back"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/ic_back" />
@@ -31,7 +32,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_marginLeft="10dp"
-            android:layout_toEndOf="@id/back">
+            android:layout_toEndOf="@id/kembali">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,11 +46,11 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/aswaja"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         app:cardBackgroundColor="#F8F8F8"
         app:cardCornerRadius="15dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="75dp"
@@ -63,30 +64,30 @@
 
             <TextView
                 android:id="@+id/text_aswaja"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:gravity="center_vertical"
-                android:padding="10dp"
                 android:text="Materi Aswaja"
                 android:textColor="@color/BlackColor"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/btn_aswaja"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
                 android:text="View"
                 android:textColor="@color/WhiteColor"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/nu"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,35 +101,35 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_nu"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi NU"
                 android:textStyle="bold"
                 android:gravity="center_vertical"
-                android:padding="10dp"
                 android:textColor="@color/BlackColor"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_nu"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
                 android:text="View"
                 android:textColor="@color/WhiteColor"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/ipnu_ippnu"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/nu">
         <LinearLayout
             android:layout_width="match_parent"
@@ -137,35 +138,35 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_ipnu_ippnu"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi IPNU IPPNU"
                 android:textStyle="bold"
                 android:gravity="center_vertical"
-                android:padding="10dp"
                 android:textColor="@color/BlackColor"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_ipnuippnu"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
                 android:text="View"
                 android:textColor="@color/WhiteColor"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/kebangsaan"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/ipnu_ippnu">
         <LinearLayout
             android:layout_width="match_parent"
@@ -174,35 +175,35 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_kebangsaan"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi Kebangsaan"
                 android:textStyle="bold"
                 android:gravity="center_vertical"
-                android:padding="10dp"
                 android:textColor="@color/BlackColor"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_kebangsaan"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
                 android:text="View"
                 android:textColor="@color/WhiteColor"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/managemen_organisasi"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/kebangsaan">
         <LinearLayout
             android:layout_width="match_parent"
@@ -211,35 +212,35 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_managemen_organisasi"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi Managemen Organisasi"
                 android:textStyle="bold"
                 android:gravity="center_vertical"
-                android:padding="10dp"
                 android:textColor="@color/BlackColor"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_managemen"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
                 android:text="View"
                 android:textColor="@color/WhiteColor"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/komunikasi_dan_kerjasama"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/managemen_organisasi">
         <LinearLayout
             android:layout_width="match_parent"
@@ -248,17 +249,17 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_komunikasi_dan_kerjasama"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi Komunikasi dan Kerjasama"
                 android:textStyle="bold"
                 android:gravity="center_vertical"
-                android:padding="10dp"
                 android:textColor="@color/BlackColor"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_komunikasi"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
@@ -270,13 +271,13 @@
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/scientific_problem_solving"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/komunikasi_dan_kerjasama">
         <LinearLayout
             android:layout_width="match_parent"
@@ -285,35 +286,35 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_scientific_problem_solving"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi Scientific Problem Solving"
                 android:textStyle="bold"
                 android:gravity="center_vertical"
-                android:padding="10dp"
                 android:textColor="@color/BlackColor"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_problem"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
                 android:text="View"
                 android:textColor="@color/WhiteColor"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/teknik_diskusi_dan_persidangan"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/scientific_problem_solving">
         <LinearLayout
             android:layout_width="match_parent"
@@ -322,23 +323,23 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_teknik_diskusi_dan_persidangan"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi Teknik Diskusi dan Persidangan"
                 android:textStyle="bold"
                 android:gravity="center_vertical"
-                android:padding="10dp"
                 android:textColor="@color/BlackColor"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_diskusi"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
                 android:text="View"
                 android:textColor="@color/WhiteColor"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
