@@ -25,7 +25,7 @@ class DetailBeritaActivity : AppCompatActivity() {
         val beritaModel = intent.getSerializableExtra("beritaModel") as BeritaModel
         with(binding) {
             //TODO: set gambar pake URL dengan glide
-            ivThumbnail.setImageResource(R.drawable.image_2)
+            ivThumbnail.setImageResource(R.drawable.image_organisasi_2)
             tvTitle.text = beritaModel.title
             Toast.makeText(this@DetailBeritaActivity, beritaModel.title, Toast.LENGTH_SHORT).show()
             tvDetail.text = beritaModel.detail

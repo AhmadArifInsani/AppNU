@@ -26,7 +26,7 @@
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/image_2" />
+            tools:src="@drawable/image_organisasi_2" />
 
         <TextView
             android:id="@+id/tvTitle"

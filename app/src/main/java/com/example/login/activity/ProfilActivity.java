@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.login.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,10 +8,11 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.login.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Profil extends AppCompatActivity {
+public class ProfilActivity extends AppCompatActivity {
     private FirebaseUser firebaseUser;
     private ImageView ImgBack;
     private Button btnLogout;
@@ -21,17 +22,17 @@ public class Profil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.profil);
+        setContentView(R.layout.activity_profil);
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         ImgBack = findViewById(R.id.back);
         btnLogout = findViewById(R.id.logout);
 
         ImgBack.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Home.class));
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
         });
         btnLogout.setOnClickListener(view -> {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(getApplicationContext(), Login.class));
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             finish();
         });
     }

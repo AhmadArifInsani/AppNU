@@ -1,14 +1,16 @@
-package com.example.login;
+package com.example.login.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class EditProfil extends AppCompatActivity {
+import com.example.login.R;
+
+public class EditProfilActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.edit_profil);
+        setContentView(R.layout.activity_edit_profil);
     }
 }

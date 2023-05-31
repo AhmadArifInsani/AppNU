@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.login.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,13 +11,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.login.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private EditText editEmail, editPassword;
     private Button btnLogin;
     private TextView txtRegister;
@@ -27,19 +28,19 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_login);
         editEmail = findViewById(R.id.email);
         editPassword = findViewById(R.id.password);
         btnLogin = findViewById(R.id.login);
         txtRegister = findViewById(R.id.button_register);
 
         mAuth = FirebaseAuth.getInstance();
-        progressDialog = new ProgressDialog(Login.this);
+        progressDialog = new ProgressDialog(LoginActivity.this);
         progressDialog.setTitle("Loading");
         progressDialog.setCancelable(false);
 
         txtRegister.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Register.class));
+            startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
         });
         btnLogin.setOnClickListener(view -> {
             if (editEmail.getText().length()>0 && editPassword.getText().length()>0){
@@ -55,7 +56,7 @@ public class Login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful() && task.getResult() !=null){
                     if (task.getResult().getUser() !=null){
-                        startActivity(new Intent(getApplicationContext(), Home.class));
+                        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                     }
                 }else{
                     Toast.makeText(getApplicationContext(), "Login Gagal", Toast.LENGTH_SHORT).show();

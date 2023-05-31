@@ -26,10 +26,10 @@
             android:name=".activity.DetailBeritaActivity"
             android:exported="false" />
         <activity
-            android:name=".Administrasi"
+            android:name=".activity.AdministrasiActivity"
             android:exported="false" />
         <activity
-            android:name=".Home"
+            android:name=".activity.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".activity.BeritaActivity"
@@ -42,29 +42,29 @@
             android:name=".MainBanner"
             android:exported="true" />
         <activity
-            android:name=".EditProfil"
+            android:name=".activity.EditProfilActivity"
             android:exported="true" />
         <activity
-            android:name=".Alumni"
+            android:name=".activity.AlumniActivity"
             android:exported="true" />
         <activity
-            android:name=".DataAnggota"
+            android:name=".activity.DataAnggotaActivity"
             android:exported="true" />
         <activity
-            android:name=".SosialMedia"
+            android:name=".activity.SosialMediaActivity"
             android:exported="true" />
         <activity
-            android:name=".Kaderisasi"
+            android:name=".activity.KaderisasiActivity"
             android:exported="true" />
         <activity
-            android:name=".Profil"
+            android:name=".activity.ProfilActivity"
             android:exported="true" />
         <activity
-            android:name=".Register"
+            android:name=".activity.RegisterActivity"
             android:exported="true"
             android:label="Register" />
         <activity
-            android:name=".Login"
+            android:name=".activity.LoginActivity"
             android:exported="true"
             android:label="Login">
             <intent-filter>

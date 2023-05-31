@@ -38,7 +38,7 @@ class BeritaAdapter(private val context: Context, private val dataBerita: List<B
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val beritaModel = dataBerita[position]
         //TODO: ganti gambar pake glide ambil url file di firebase storage
-        holder.ivThumbnail.setImageResource(R.drawable.image_2)
+        holder.ivThumbnail.setImageResource(R.drawable.image_organisasi_2)
         holder.tvTitle.text = beritaModel.title
         holder.cvContainer.setOnClickListener {
             val intent = Intent(context, DetailBeritaActivity::class.java)

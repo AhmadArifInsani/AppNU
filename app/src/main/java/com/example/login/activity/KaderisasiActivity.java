@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.login.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class Kaderisasi extends AppCompatActivity {
+import com.example.login.PdfView;
+import com.example.login.R;
+
+public class KaderisasiActivity extends AppCompatActivity {
     private ImageView ImgBack;
     private Button BtnView1, BtnView2, BtnView3, BtnView4, BtnView5, BtnView6, BtnView7, BtnView8;
 
@@ -18,7 +21,7 @@ public class Kaderisasi extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kaderisasi);
+        setContentView(R.layout.activity_kaderisasi);
         ImgBack = findViewById(R.id.back);
         BtnView1 = findViewById(R.id.btn_aswaja);
         BtnView2 = findViewById(R.id.btn_nu);
@@ -31,13 +34,13 @@ public class Kaderisasi extends AppCompatActivity {
 
 
         ImgBack.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Home.class));
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
         });
 
         BtnView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent view = new Intent(Kaderisasi.this, PdfView.class);
+                Intent view = new Intent(KaderisasiActivity.this, PdfView.class);
                 startActivity(view);
             }
         });
@@ -45,7 +48,7 @@ public class Kaderisasi extends AppCompatActivity {
         BtnView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent view = new Intent(Kaderisasi.this, PdfView.class);
+                Intent view = new Intent(KaderisasiActivity.this, PdfView.class);
                 startActivity(view);
             }
         });

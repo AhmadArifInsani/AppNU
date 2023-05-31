@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/WhiteColor"
-    tools:context=".Profil">
+    tools:context=".activity.ProfilActivity">
     <RelativeLayout
         android:id="@+id/footer_profil"
         android:layout_width="match_parent"

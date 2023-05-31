@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.login.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.login.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -17,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
-public class Register extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
     private EditText editNama, editEmail, editPassword, editKonfirmasiPassword;
     private Button btnLogin, btnRegister;
     private FirebaseAuth mAuth;
@@ -26,7 +27,7 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register);
+        setContentView(R.layout.activity_register);
         editNama = findViewById(R.id.nama);
         editEmail = findViewById(R.id.email);
         editPassword = findViewById(R.id.password);
@@ -35,7 +36,7 @@ public class Register extends AppCompatActivity {
         btnRegister = findViewById(R.id.register);
 
         mAuth = FirebaseAuth.getInstance();
-        progressDialog = new ProgressDialog(Register.this);
+        progressDialog = new ProgressDialog(RegisterActivity.this);
         progressDialog.setTitle("Loading");
         progressDialog.setCancelable(false);
 
@@ -84,7 +85,7 @@ public class Register extends AppCompatActivity {
     }
 
     private void reload(){
-        startActivity(new Intent(getApplicationContext(), Login.class));
+        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
     }
 
     @Override
