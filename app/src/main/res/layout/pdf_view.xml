@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/WhiteColor">
+    tools:context=".PdfView">
+
+    <com.joanzapata.pdfview.PDFView
+        android:id="@+id/pdf_view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.joanzapata.pdfview.PDFView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/footer_radius"
         android:gravity="center_horizontal"
-        android:paddingBottom="40dp"
+        android:paddingVertical="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,7 +22,6 @@
             android:id="@+id/ipnu"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginTop="30dp"
             android:gravity="center">
             <ImageView
                 android:layout_width="70dp"
@@ -36,7 +35,6 @@
             android:layout_height="70dp"
             android:gravity="center"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
             android:layout_toEndOf="@id/ipnu">
             <ImageView
                 android:layout_width="70dp"
@@ -50,7 +48,6 @@
             android:layout_height="70dp"
             android:gravity="center"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
             android:layout_toEndOf="@id/ippnu">
             <ImageView
                 android:layout_width="wrap_content"
@@ -63,7 +60,6 @@
             android:layout_height="70dp"
             android:gravity="center"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
             android:layout_toEndOf="@id/muslimat">
             <ImageView
                 android:layout_width="wrap_content"

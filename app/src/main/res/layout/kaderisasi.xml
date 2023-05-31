@@ -46,13 +46,11 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/aswaja"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         app:cardBackgroundColor="#F8F8F8"
         app:cardCornerRadius="15dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="75dp"
@@ -66,7 +64,7 @@
 
             <TextView
                 android:id="@+id/text_aswaja"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:gravity="center_vertical"
@@ -76,6 +74,7 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/btn_aswaja"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
@@ -87,14 +86,12 @@
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/nu"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/aswaja">
         <LinearLayout
@@ -104,7 +101,7 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_nu"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi NU"
@@ -114,6 +111,7 @@
                 android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_nu"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
@@ -125,12 +123,10 @@
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/ipnu_ippnu"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,7 +138,7 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_ipnu_ippnu"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi IPNU IPPNU"
@@ -152,6 +148,7 @@
                 android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_ipnuippnu"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
@@ -163,12 +160,10 @@
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/kebangsaan"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -180,7 +175,7 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_kebangsaan"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi Kebangsaan"
@@ -190,6 +185,7 @@
                 android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_kebangsaan"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
@@ -201,12 +197,10 @@
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/managemen_organisasi"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -218,7 +212,7 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_managemen_organisasi"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi Managemen Organisasi"
@@ -228,6 +222,7 @@
                 android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_managemen"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
@@ -239,12 +234,10 @@
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/komunikasi_dan_kerjasama"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -256,7 +249,7 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_komunikasi_dan_kerjasama"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi Komunikasi dan Kerjasama"
@@ -266,6 +259,7 @@
                 android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_komunikasi"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
@@ -277,12 +271,10 @@
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/scientific_problem_solving"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -294,7 +286,7 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_scientific_problem_solving"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi Scientific Problem Solving"
@@ -304,6 +296,7 @@
                 android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_problem"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"
@@ -315,12 +308,10 @@
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/teknik_diskusi_dan_persidangan"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="#F8F8F8"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -332,7 +323,7 @@
             android:gravity="center">
             <TextView
                 android:id="@+id/text_teknik_diskusi_dan_persidangan"
-                android:layout_width="260dp"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppinssemibold"
                 android:text="Materi Teknik Diskusi dan Persidangan"
@@ -342,6 +333,7 @@
                 android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btn_diskusi"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/button_view"

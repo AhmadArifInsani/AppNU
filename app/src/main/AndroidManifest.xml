@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -15,41 +17,47 @@
         android:theme="@style/Theme.Login"
         tools:targetApi="31">
         <activity
+            android:name=".PdfView"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainBanner"
-            android:exported="false"/>
+            android:exported="true" />
         <activity
             android:name=".EditProfil"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".BeritaSaya1"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".BeritaSaya"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Organisasi1"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Alumni"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".DataAnggota"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SosialMedia"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Administrasi"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kaderisasi"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Organisasi"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Profil"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Register"
             android:exported="true"
@@ -57,10 +65,7 @@
         <activity
             android:name=".Login"
             android:exported="true"
-            android:label="Login"/>
-        <activity
-            android:name=".Home"
-            android:exported="true">
+            android:label="Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -68,8 +73,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+            android:name=".Home"
+            android:exported="true"
+            />
     </application>
 
 </manifest>
