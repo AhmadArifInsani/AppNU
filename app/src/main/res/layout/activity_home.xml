@@ -58,8 +58,8 @@
 
         <com.denzcoskun.imageslider.ImageSlider
             android:id="@+id/slide"
-            android:layout_width="290dp"
-            android:layout_height="140dp"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
             app:iss_auto_cycle="true"
             app:iss_delay="0"
             app:iss_error_image="@drawable/ic_launcher_background"
@@ -71,11 +71,10 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="415dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="450dp"
         android:background="@drawable/background_white"
         android:gravity="center_horizontal"
-        android:paddingTop="20dp"
+        android:paddingTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -44,13 +44,5 @@ public class KaderisasiActivity extends AppCompatActivity {
                 startActivity(view);
             }
         });
-
-        BtnView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent view = new Intent(KaderisasiActivity.this, PdfView.class);
-                startActivity(view);
-            }
-        });
     }
 }
