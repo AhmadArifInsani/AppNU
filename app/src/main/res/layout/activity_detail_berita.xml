@@ -8,14 +8,14 @@
 
     <include
         android:id="@+id/tbToolbar"
-        layout="@layout/layout_toolbar"
+        layout="@layout/layout_toolbar_organisasi"
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolbarHeight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="@dimen/dimen_0dp"
+        android:layout_width="350dp"
         android:layout_height="@dimen/dimen_0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

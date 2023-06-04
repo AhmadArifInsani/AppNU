@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimen_16dp"
+    android:background="@color/WhiteColor"
+    android:elevation="@dimen/dimen_1dp"
+    android:layout_gravity="center_horizontal">
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/menu_abu_radius10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/text_aswaja"
+            android:layout_width="220dp"
+            android:layout_height="35dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:gravity="center_vertical"
+            android:text="Pedoman Administrasi"
+            android:textColor="@color/BlackColor"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/btn_aswaja"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:background="@drawable/button_view"
+            android:text="Download"
+            android:textColor="@color/WhiteColor"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/text_aswaja"
+            tools:ignore="TouchTargetSizeCheck" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

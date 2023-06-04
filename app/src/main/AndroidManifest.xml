@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Login"
         tools:targetApi="31">
         <activity
+            android:name=".activity.SosialMedia1"
+            android:exported="false" />
+        <activity
             android:name=".activity.DaftarBeritaActivity"
             android:exported="false" />
         <activity
@@ -24,13 +27,21 @@
             android:exported="false" />
         <activity
             android:name=".activity.DetailBeritaActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.AdministrasiActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:label="Administrasi" />
         <activity
             android:name=".activity.HomeActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:label="Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activity.BeritaActivity"
             android:exported="true"
@@ -39,40 +50,37 @@
             android:name=".PdfView"
             android:exported="true" />
         <activity
-            android:name=".MainBanner"
-            android:exported="true" />
-        <activity
             android:name=".activity.EditProfilActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="EditProfil" />
         <activity
             android:name=".activity.AlumniActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Alumni" />
         <activity
             android:name=".activity.DataAnggotaActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="DataAnggota" />
         <activity
             android:name=".activity.SosialMediaActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="SosialMedia" />
         <activity
             android:name=".activity.KaderisasiActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Kaderisasi" />
         <activity
             android:name=".activity.ProfilActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Profil" />
         <activity
             android:name=".activity.RegisterActivity"
             android:exported="true"
-            android:label="Register" />
+            android:label="Register"></activity>
         <activity
             android:name=".activity.LoginActivity"
             android:exported="true"
-            android:label="Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="Login" />
         <activity
             android:name=".activity.MainActivity"
             android:exported="true" />

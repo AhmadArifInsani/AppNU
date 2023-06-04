@@ -9,15 +9,20 @@ import android.widget.ImageView;
 import com.example.login.R;
 
 public class SosialMediaActivity extends AppCompatActivity {
-    private ImageView ImgBack;
+    private ImageView ImgBack, ImgHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sosial_media);
-        ImgBack = findViewById(R.id.back);
+        ImgBack = findViewById(R.id.ibBack);
+        ImgHome = findViewById(R.id.ivHomeButton);
 
         ImgBack.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+        });
+
+        ImgHome.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
         });
     }

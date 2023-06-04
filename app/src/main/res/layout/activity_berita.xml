@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.BeritaActivity">
+    tools:context=".activity.BeritaActivity"
+    android:background="@color/WhiteColor">
 
     <include
         android:id="@+id/tbToolbar"
-        layout="@layout/layout_toolbar"
+        layout="@layout/layout_toolbar_organisasi"
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolbarHeight"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,8 +17,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvBerita"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="@dimen/dimen_0dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

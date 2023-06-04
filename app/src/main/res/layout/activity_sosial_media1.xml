@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.DaftarBeritaActivity">
+    android:background="@color/WhiteColor"
+    tools:context=".activity.SosialMedia1">
 
     <include
         android:id="@+id/tbToolbar"
@@ -16,13 +17,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvBerita"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="@dimen/dimen_0dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tbToolbar"
-        tools:listitem="@layout/item_berita_admin" />
+        tools:listitem="@layout/item_media_sosial1" />
 
     <include
         android:id="@+id/nvNavBar"

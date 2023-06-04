@@ -119,7 +119,7 @@ class BeritaActivity : AppCompatActivity() {
 
     private fun initAction() {
         binding.nvNavBar.ivHomeButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
         }

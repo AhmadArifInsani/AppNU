@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
     private FirebaseUser firebaseUser;
-    private ImageView viewProfil, ImgOrganisasi, ImgKaderisasi, ImgAdministrasi, ImgSosialMedia, ImgDataAnggota, ImgAlumni, ImgHome;
+    private ImageView viewProfil, imgOrganisasi, imgKaderisasi, imgAdministrasi, imgSosialMedia, imgDataAnggota, imgAlumni, imgHome ;
     ImageSlider imageSlider;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -27,34 +27,18 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         viewProfil = findViewById(R.id.imageView1);
-        ImgOrganisasi = findViewById(R.id.img_organisasi);
-        ImgKaderisasi = findViewById(R.id.img_kaderisasi);
-        ImgAdministrasi = findViewById(R.id.img_administrasi);
-        ImgSosialMedia = findViewById(R.id.img_media_sosial);
-        ImgDataAnggota = findViewById(R.id.img_data_anggota);
-        ImgAlumni = findViewById(R.id.img_alumni);
+        imgOrganisasi = findViewById(R.id.img_organisasi);
+        imgKaderisasi = findViewById(R.id.img_kaderisasi);
+        imgAdministrasi = findViewById(R.id.img_administrasi);
+        imgSosialMedia = findViewById(R.id.img_media_sosial);
+        imgDataAnggota = findViewById(R.id.img_data_anggota);
+        imgAlumni = findViewById(R.id.img_alumni);
+        imgHome = findViewById(R.id.ivHomeButton);
+
         imageSlider = findViewById(R.id.slide);
 
         viewProfil.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(), ProfilActivity.class));
-        });
-        ImgOrganisasi.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), BeritaActivity.class));
-        });
-        ImgKaderisasi.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), KaderisasiActivity.class));
-        });
-        ImgAdministrasi.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), AdministrasiActivity.class));
-        });
-        ImgSosialMedia.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), SosialMediaActivity.class));
-        });
-        ImgDataAnggota.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), DataAnggotaActivity.class));
-        });
-        ImgAlumni.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), AlumniActivity.class));
         });
 
         ArrayList<SlideModel> imageList = new ArrayList<>();
@@ -63,5 +47,33 @@ public class HomeActivity extends AppCompatActivity {
         imageList.add(new SlideModel(R.drawable.image_organisasi_2,null));
         imageList.add(new SlideModel(R.drawable.image_sosialmedia_1,null));
         imageSlider.setImageList(imageList, ScaleTypes.CENTER_CROP);
+
+        imgOrganisasi.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), BeritaActivity.class));
+        });
+
+        imgKaderisasi.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), KaderisasiActivity.class));
+        });
+
+        imgAdministrasi.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), AdministrasiActivity.class));
+        });
+
+        imgSosialMedia.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), SosialMediaActivity.class));
+        });
+
+        imgDataAnggota.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), DataAnggotaActivity.class));
+        });
+
+        imgAlumni.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), AlumniActivity.class));
+        });
+
+        imgHome.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+        });
     }
 }
