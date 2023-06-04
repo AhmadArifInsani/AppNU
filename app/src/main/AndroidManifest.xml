@@ -76,11 +76,13 @@
         <activity
             android:name=".activity.RegisterActivity"
             android:exported="true"
-            android:label="Register"></activity>
+            android:label="Register"/>
         <activity
             android:name=".activity.LoginActivity"
             android:exported="true"
-            android:label="Login" />
+            android:label="AppNU">
+
+        </activity>
         <activity
             android:name=".activity.MainActivity"
             android:exported="true" />
