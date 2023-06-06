@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <TextView
-            android:id="@+id/text_aswaja"
+            android:id="@+id/text_materi"
             android:layout_width="240dp"
             android:layout_height="35dp"
             android:fontFamily="@font/poppinssemibold"
@@ -28,14 +28,14 @@
             android:textSize="16sp"
             android:textStyle="bold"/>
         <Button
-            android:id="@+id/btn_aswaja"
+            android:id="@+id/btnpdf"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:background="@drawable/button_view"
             android:text="View"
             android:textColor="@color/WhiteColor"
             android:textSize="15sp"
-            android:layout_toEndOf="@id/text_aswaja"
+            android:layout_toEndOf="@id/text_materi"
             tools:ignore="TouchTargetSizeCheck" />
     </RelativeLayout>
 

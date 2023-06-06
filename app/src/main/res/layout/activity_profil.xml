@@ -14,167 +14,176 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RelativeLayout
-        android:id="@+id/profil"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_profil"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="20dp"
-        android:paddingVertical="15dp"
+        android:paddingVertical="@dimen/_10sdp"
         android:background="@drawable/menu_abu_radius10"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_data"
         app:layout_constraintTop_toBottomOf="@id/tbToolbar">
-        <RelativeLayout
-            android:id="@+id/relativeLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/background_profil"
-                android:src="@drawable/person" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/text"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:layout_below="@id/relativeLayout3">
-            <TextView
-                android:id="@+id/text_nama"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/BlackColor"
-                android:fontFamily="@font/poppinssemibold"
-                android:text="Ahmad Arif Insani"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/BlackColor"
-                android:text="+62 897-8768-8768"
-                android:layout_below="@id/text_nama"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:layout_below="@id/text">
-            <Button
-                android:id="@+id/btnEdit"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:background="@drawable/button"
-                android:text="@string/action_edit"
-                tools:ignore="TouchTargetSizeCheck" />
-        </RelativeLayout>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/background_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
-        android:paddingVertical="10dp"
-        android:background="@drawable/menu_abu_radius10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profil">
-        <RelativeLayout
-            android:id="@+id/layout_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="15dp"
-            android:gravity="center_vertical">
-            <ImageView
-                android:id="@+id/email"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_email"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_toEndOf="@id/email"
-                android:text="arifinsani40@gmail.com"
-                android:textSize="14sp"
-                android:textColor="@color/BlackColor"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/layout_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/layout_email"
-            android:paddingLeft="15dp"
-            android:paddingTop="15dp"
-            android:gravity="center_vertical">
-            <ImageView
-                android:id="@+id/date"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_location"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_toEndOf="@id/date"
-                android:text="PR Plosokerep"
-                android:textSize="14sp"
-                android:textColor="@color/BlackColor"/>
-
-        </RelativeLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/berita_kegiatan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginHorizontal="20dp"
-        android:padding="10dp"
-        android:background="@drawable/menu_abu_radius10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/background_date">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/background_profil"
+            android:src="@drawable/person"
+            app:civ_border_color="@color/abuabu"
+            app:civ_border_width="@dimen/_2sdp"
+            app:layout_constraintBottom_toTopOf="@id/nama"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/nama"
+            android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:text="Ahmad Arif Insani"
+            android:textColor="@color/BlackColor"
+            android:textSize="17sp"
+            android:fontFamily="@font/poppinssemibold"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/profil"
+            app:layout_constraintEnd_toEndOf="@id/profil"
+            app:layout_constraintBottom_toTopOf="@id/nomor"
+            app:layout_constraintTop_toBottomOf="@id/profil" />
+        <TextView
+            android:id="@+id/nomor"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="085706747612"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintStart_toStartOf="@id/profil"
+            app:layout_constraintEnd_toEndOf="@id/profil"
+            app:layout_constraintBottom_toTopOf="@id/btnEdit"
+            app:layout_constraintTop_toBottomOf="@id/nama"/>
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/button"
+            android:text="@string/action_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/profil"
+            app:layout_constraintStart_toStartOf="@id/profil"
+            app:layout_constraintTop_toBottomOf="@id/nomor"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_data"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/menu_abu_radius10"
+        app:layout_constraintTop_toBottomOf="@id/layout_profil"
+        app:layout_constraintEnd_toEndOf="@id/layout_profil"
+        app:layout_constraintStart_toStartOf="@id/layout_profil"
+        app:layout_constraintBottom_toTopOf="@id/layout_admin_berita">
+        <ImageView
+            android:id="@+id/img_email"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/text_email"
+            app:layout_constraintBottom_toTopOf="@id/img_location"
+            />
+        <TextView
+            android:id="@+id/text_email"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:text="arifinsani40@gmail.com"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="@id/img_email"
+            app:layout_constraintStart_toEndOf="@id/img_email"
+            app:layout_constraintBottom_toBottomOf="@id/img_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <ImageView
+            android:id="@+id/img_location"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintStart_toStartOf="@id/img_email"
+            app:layout_constraintTop_toBottomOf="@id/img_email"
+            app:layout_constraintEnd_toStartOf="@id/text_location"
+            />
+        <TextView
+            android:id="@+id/text_location"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:text="PR Plosokerep"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="@id/img_location"
+            app:layout_constraintStart_toEndOf="@id/img_location"
+            app:layout_constraintBottom_toBottomOf="@id/img_location"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_admin_berita"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_abu_radius10"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/layout_data"
+        app:layout_constraintEnd_toEndOf="@id/layout_profil"
+        app:layout_constraintStart_toStartOf="@id/layout_profil"
+        app:layout_constraintBottom_toTopOf="@id/layout_admin_poster">
+        <TextView
+            android:id="@+id/text_berita"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:text="Berita Kegiatan"
-            android:textSize="16sp"
-            android:textColor="@color/BlackColor"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/poster_event"
-        android:layout_width="match_parent"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_admin_poster"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginHorizontal="20dp"
-        android:padding="10dp"
         android:background="@drawable/menu_abu_radius10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/berita_kegiatan">
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/layout_admin_berita"
+        app:layout_constraintEnd_toEndOf="@id/layout_profil"
+        app:layout_constraintStart_toStartOf="@id/layout_profil">
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/text_poster"
+            android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:text="Poster Event"
-            android:textSize="16sp"
-            android:textColor="@color/BlackColor"/>
-
-    </RelativeLayout>
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/logout"
@@ -186,8 +195,8 @@
         android:gravity="center"
         android:text="LOGOUT"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/poster_event" />
+        app:layout_constraintEnd_toEndOf="@id/layout_profil"
+        app:layout_constraintTop_toBottomOf="@id/layout_admin_poster"
+        app:layout_constraintStart_toStartOf="@id/layout_profil"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

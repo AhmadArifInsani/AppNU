@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
-
+    android:layout_gravity="center_horizontal">
     <include
         android:id="@+id/tbToolbar"
         layout="@layout/layout_toolbar_sosial_media"
@@ -12,16 +13,168 @@
         android:layout_height="@dimen/toolbarHeight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvBerita"
-        android:layout_width="350dp"
-        android:layout_height="@dimen/dimen_0dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <RelativeLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbToolbar"
-        tools:listitem="@layout/item_data_anggota" />
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tbToolbar">
+
+        <RelativeLayout
+            android:id="@+id/background_1"
+            android:layout_width="165dp"
+            android:layout_height="200dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/menu_abu_radius10"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/image_1"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:src="@drawable/image_sosialmedia_1" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:layout_below="@id/image_1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="NGOPI (Ngobrol Perkara Ikatan) Sosialisasi Bersama Rekan Ketua"
+                    android:textAlignment="center"
+                    android:textColor="@color/BlackColor"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/background_2"
+            android:layout_width="165dp"
+            android:layout_height="200dp"
+            android:layout_toEndOf="@id/background_1"
+            android:background="@drawable/menu_abu_radius10"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/image_2"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:src="@drawable/image_sosialmedia_2" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:layout_below="@id/image_2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="MAKESTA PAC IPNU IPPNU Sumobito"
+                    android:textAlignment="center"
+                    android:textColor="@color/BlackColor"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_1">
+
+        <RelativeLayout
+            android:id="@+id/background_3"
+            android:layout_width="165dp"
+            android:layout_height="200dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/menu_abu_radius10"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/image_3"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:src="@drawable/image_sosialmedia_3" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:layout_below="@id/image_3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="LAKMUD PAC IPNU IPPNU Sumobito"
+                    android:textAlignment="center"
+                    android:textColor="@color/BlackColor"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/background_4"
+            android:layout_width="165dp"
+            android:layout_height="200dp"
+            android:layout_toEndOf="@id/background_3"
+            android:background="@drawable/menu_abu_radius10"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/image_4"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:src="@drawable/image_sosialmedia_4" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:layout_below="@id/image_4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Tournament Badminton PAC IPNU IPPNU Sumobito"
+                    android:textAlignment="center"
+                    android:textColor="@color/BlackColor"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
     <include
         android:id="@+id/nvNavBar"
         layout="@layout/layout_bottom_nav_bar"
@@ -29,4 +182,5 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

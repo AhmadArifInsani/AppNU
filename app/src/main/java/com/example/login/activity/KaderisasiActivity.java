@@ -1,21 +1,25 @@
 package com.example.login.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.login.PdfView;
 import com.example.login.R;
+import com.example.login.model.KaderisasiModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class KaderisasiActivity extends AppCompatActivity {
     private ImageView ImgBack, ImgHome;
 //    private Button BtnView1;
+    private RecyclerView pdfList;
 
+    List<KaderisasiModel> listKaderisasi;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -25,6 +29,7 @@ public class KaderisasiActivity extends AppCompatActivity {
         ImgBack = findViewById(R.id.ibBack);
 //        BtnView1 = findViewById(R.id.btn_aswaja);
         ImgHome = findViewById(R.id.ivHomeButton);
+        listKaderisasi = new ArrayList<>();
 
         ImgBack.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
@@ -40,5 +45,7 @@ public class KaderisasiActivity extends AppCompatActivity {
         ImgHome.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
         });
+        listKaderisasi.add(new KaderisasiModel("Materi Aswaja", "https://github.com/AhmadArifInsani/appnu/blob/master/app/src/main/assets/aswaja.pdf"));
+
     }
 }
