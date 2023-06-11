@@ -8,7 +8,7 @@
     tools:context=".activity.SosialMediaActivity">
     <include
         android:id="@+id/tbToolbar"
-        layout="@layout/layout_toolbar_sosial_media"
+        layout="@layout/layout_toolbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolbarHeight"
         app:layout_constraintStart_toStartOf="parent"

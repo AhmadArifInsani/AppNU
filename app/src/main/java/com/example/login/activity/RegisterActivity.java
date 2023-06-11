@@ -58,11 +58,15 @@ public class RegisterActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mStore = FirebaseFirestore.getInstance();
-        userId = mAuth.getCurrentUser().getUid();
 
         btnLogin.setOnClickListener(view -> {
             finish();
         });
+
+        if (mAuth.getCurrentUser() != null){
+            userId = mAuth.getCurrentUser().getUid();
+        }
+
         Birthday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,7 +133,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     Log.d(TAG, "onFailure: " + e.toString());
                                 }
                             });
-                            startActivity(new Intent(getApplicationContext(), TesLogin.class));
+                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                         }else{
                             Toast.makeText(RegisterActivity.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -141,7 +145,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), TesLogin.class));
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         });
     }

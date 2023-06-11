@@ -73,7 +73,7 @@ public class EditProfilActivity extends AppCompatActivity {
         EtBirthday = findViewById(R.id.etBirthday);
         EtNomorTlp = findViewById(R.id.etNomorTlp);
         ImgBack = findViewById(R.id.ibBack);
-        ubhFoto = findViewById(R.id.text_ubah_nama);
+        ubhFoto = findViewById(R.id.text_ubah_foto);
         ftoProfil = findViewById(R.id.profil);
         btnSave = findViewById(R.id.btn_simpan);
 
@@ -81,7 +81,7 @@ public class EditProfilActivity extends AppCompatActivity {
         mStore = FirebaseFirestore.getInstance();
         user = mAuth.getCurrentUser();
 
-    //    userId = mAuth.getCurrentUser().getUid();
+        userId = mAuth.getCurrentUser().getUid();
         storageReference = FirebaseStorage.getInstance().getReference();
         DocumentReference documentReference = mStore.collection("users").document(userId);
 
@@ -109,7 +109,7 @@ public class EditProfilActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (EtNama.getText().toString().isEmpty() || EtEmail.getText().toString().isEmpty() || EtPimpinan.getText().toString().isEmpty() || EtBirthday.getText().toString().isEmpty() || EtNomorTlp.getText().toString().isEmpty()){
-                    Toast.makeText(EditProfilActivity.this, "One or Many fields are empty", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EditProfilActivity.this, "One or many fields are empty", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String email = EtEmail.getText().toString();
@@ -119,12 +119,19 @@ public class EditProfilActivity extends AppCompatActivity {
                         DocumentReference docRef = mStore.collection("users").document(user.getUid());
                         Map<String, Object> edited = new HashMap<>();
                         edited.put("email", email);
-                        edited.put("nama", EtEmail.getText().toString());
+                        edited.put("name", EtNama.getText().toString());
                         edited.put("pimpinan", EtPimpinan.getText().toString());
                         edited.put("birthday", EtBirthday.getText().toString());
-                        edited.put("nomorTlp", EtNomorTlp.getText().toString());
-                        docRef.update(edited);
-                        Toast.makeText(EditProfilActivity.this, "Email is changed", Toast.LENGTH_SHORT).show();
+                        edited.put("phone", EtNomorTlp.getText().toString());
+                        docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(EditProfilActivity.this, "Profile update", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), ProfilActivity.class));
+                                finish();
+                            }
+                        });
+                        Toast.makeText(EditProfilActivity.this, "Profile is changed", Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -136,11 +143,11 @@ public class EditProfilActivity extends AppCompatActivity {
         });
 
         Intent data = getIntent();
-        String nama = data.getStringExtra("nama");
+        String nama = data.getStringExtra("name");
         String email = data.getStringExtra("email");
         String pimpinan = data.getStringExtra("pimpinan");
         String birthday = data.getStringExtra("birthday");
-        String nomorTlp = data.getStringExtra("nomorTlp");
+        String nomorTlp = data.getStringExtra("phone");
 
         EtNama.setText(nama);
         EtEmail.setText(email);
