@@ -17,12 +17,6 @@
         android:theme="@style/Theme.Login"
         tools:targetApi="31">
         <activity
-            android:name=".TesLogin"
-            android:exported="false" />
-        <activity
-            android:name=".TesRegistrasi"
-            android:exported="false" />
-        <activity
             android:name=".activity.SosialMedia1"
             android:exported="false" />
         <activity
@@ -41,13 +35,7 @@
         <activity
             android:name=".activity.HomeActivity"
             android:exported="true"
-            android:label="Home">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="Home" />
         <activity
             android:name=".activity.BeritaActivity"
             android:exported="true"
@@ -82,11 +70,20 @@
         <activity
             android:name=".activity.RegisterActivity"
             android:exported="true"
-            android:label="Register" />
+            android:label="Register">
+
+        </activity>
         <activity
             android:name=".activity.LoginActivity"
             android:exported="true"
-            android:label="AppNU" />
+            android:label="AppNU">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".activity.MainActivity"
             android:exported="true" />

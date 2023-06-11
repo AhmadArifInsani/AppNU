@@ -94,14 +94,14 @@
         app:layout_constraintStart_toStartOf="@id/layout_profil"
         app:layout_constraintBottom_toTopOf="@id/layout_admin_berita">
         <ImageView
-            android:id="@+id/img_email"
+            android:id="@+id/ic_email"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
             android:src="@drawable/ic_email"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/text_email"
-            app:layout_constraintBottom_toTopOf="@id/img_location"
+            app:layout_constraintBottom_toTopOf="@id/ic_location"
             />
         <TextView
             android:id="@+id/text_email"
@@ -111,32 +111,54 @@
             style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:text="arifinsani40@gmail.com"
             android:textSize="17sp"
-            app:layout_constraintTop_toTopOf="@id/img_email"
-            app:layout_constraintStart_toEndOf="@id/img_email"
-            app:layout_constraintBottom_toBottomOf="@id/img_email"
+            app:layout_constraintTop_toTopOf="@id/ic_email"
+            app:layout_constraintStart_toEndOf="@id/ic_email"
+            app:layout_constraintBottom_toBottomOf="@id/ic_email"
             app:layout_constraintEnd_toEndOf="parent"
             />
         <ImageView
-            android:id="@+id/img_location"
+            android:id="@+id/ic_location"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:src="@drawable/ic_location"
-            app:layout_constraintStart_toStartOf="@id/img_email"
-            app:layout_constraintTop_toBottomOf="@id/img_email"
-            app:layout_constraintEnd_toStartOf="@id/text_location"
+            app:layout_constraintStart_toStartOf="@id/ic_email"
+            app:layout_constraintTop_toBottomOf="@id/ic_email"
+            app:layout_constraintEnd_toStartOf="@id/text_pimpinan"
             />
         <TextView
-            android:id="@+id/text_location"
+            android:id="@+id/text_pimpinan"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
             style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:text="PR Plosokerep"
             android:textSize="17sp"
-            app:layout_constraintTop_toTopOf="@id/img_location"
-            app:layout_constraintStart_toEndOf="@id/img_location"
-            app:layout_constraintBottom_toBottomOf="@id/img_location"
+            app:layout_constraintTop_toTopOf="@id/ic_location"
+            app:layout_constraintStart_toEndOf="@id/ic_location"
+            app:layout_constraintBottom_toBottomOf="@id/ic_location"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageView
+            android:id="@+id/ic_birthday"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_birthday"
+            app:layout_constraintStart_toStartOf="@id/ic_email"
+            app:layout_constraintTop_toBottomOf="@id/ic_location"
+            app:layout_constraintEnd_toStartOf="@id/text_birthday"
+            />
+        <TextView
+            android:id="@+id/text_birthday"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:text="26 September 1997"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="@id/ic_birthday"
+            app:layout_constraintStart_toEndOf="@id/ic_birthday"
+            app:layout_constraintBottom_toBottomOf="@id/ic_birthday"
             app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout

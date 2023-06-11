@@ -1,6 +1,7 @@
 package com.example.login.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.login.PdfView;
 import com.example.login.R;
 import com.example.login.model.KaderisasiModel;
 
@@ -37,7 +39,9 @@ public class AdapterKaderisasi extends RecyclerView.Adapter<AdapterKaderisasi.Vi
         KaderisasiModel kaderisasiModel = models.get(position);
         holder.tvNama.setText(kaderisasiModel.getNmFile());
         holder.btnView.setOnClickListener(view -> {
-
+            Intent intent = new Intent(context, PdfView.class);
+            intent.putExtra("kaderisasiModel", kaderisasiModel);
+            context.startActivity(intent);
         });
     }
 
@@ -52,6 +56,9 @@ public class AdapterKaderisasi extends RecyclerView.Adapter<AdapterKaderisasi.Vi
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            tvNama = itemView.findViewById(R.id.text_materi);
+            btnView = itemView.findViewById(R.id.btnpdf);
         }
+
     }
 }

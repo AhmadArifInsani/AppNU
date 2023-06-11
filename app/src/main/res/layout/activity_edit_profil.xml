@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="700dp"
     android:layout_gravity="center_horizontal"
     android:onClick="update"
     tools:context=".activity.EditProfilActivity">
@@ -42,66 +42,83 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/profil" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nama"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:hint="Nama"
-        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_ubah_nama"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@id/text_ubah_nama">
 
-    <EditText
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:hint="Email"
-        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nama"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/password"
+        app:layout_constraintTop_toBottomOf="@id/nama">
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pimpinan"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
-        android:hint="Password"
-        android:inputType="textPassword"
+        android:hint="Pimpinan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/tanggal_lahir"
+        app:layout_constraintTop_toBottomOf="@id/email">
+        <EditText
+            android:id="@+id/etPimpinan"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/birthday"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:hint="Tanggal Lahir"
-        android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@id/pimpinan">
 
-    <EditText
-        android:id="@+id/nomor_telepon"
+        <EditText
+            android:id="@+id/etBirthday"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nomorTlp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:hint="Nomor Telepon"
-        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tanggal_lahir"
-        tools:ignore="TouchTargetSizeCheck" />
-
+        app:layout_constraintTop_toBottomOf="@id/birthday">
+        <EditText
+            android:id="@+id/etNomorTlp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/btn_simpan"
         android:layout_width="200dp"
@@ -115,5 +132,5 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nomor_telepon" />
+        app:layout_constraintTop_toBottomOf="@id/nomorTlp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

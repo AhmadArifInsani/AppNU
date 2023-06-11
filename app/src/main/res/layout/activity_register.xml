@@ -124,124 +124,152 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/layout_edit_text"
-        android:layout_width="match_parent"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_nama"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:hint="Name"
+        app:layout_constraintTop_toBottomOf="@id/background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/background">
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layout_nama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/nama"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
-                android:fontFamily="@font/poppinsregular"
-                android:gravity="center_vertical"
-                android:hint="Nama Lengkap"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layout_email"
+        app:layout_constraintStart_toStartOf="parent" >
+        <EditText
+            android:id="@+id/nama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/layout_nama">
-
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppinsregular"
-                android:gravity="center_vertical"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layout_password"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center_vertical"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_email"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        app:layout_constraintTop_toBottomOf="@id/layout_nama"
+        app:layout_constraintEnd_toEndOf="@id/layout_nama"
+        app:layout_constraintStart_toStartOf="@id/layout_nama" >
+        <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/layout_email"
-            app:passwordToggleEnabled="true">
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/poppinsregular"
-                android:gravity="center_vertical"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:padding="10dp"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layout_confirm_password"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center_vertical"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_birthday"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Birthday"
+        app:layout_constraintTop_toBottomOf="@id/layout_email"
+        app:layout_constraintEnd_toEndOf="@id/layout_email"
+        app:layout_constraintStart_toStartOf="@id/layout_email" >
+        <EditText
+            android:id="@+id/birthday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true"
-            android:layout_below="@id/layout_password">
-
-            <EditText
-                android:id="@+id/confirm_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/poppinsregular"
-                android:gravity="center_vertical"
-                android:hint="Konfirmasi Password"
-                android:inputType="textPassword"
-                android:padding="10dp"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/layout_button"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_nomorTlp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        app:layout_constraintTop_toBottomOf="@id/layout_birthday"
+        app:layout_constraintEnd_toEndOf="@id/layout_birthday"
+        app:layout_constraintStart_toStartOf="@id/layout_birthday" >
+        <EditText
+            android:id="@+id/nomorTlp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_pimpinan"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Delegation"
+        app:layout_constraintTop_toBottomOf="@id/layout_nomorTlp"
+        app:layout_constraintEnd_toEndOf="@id/layout_nomorTlp"
+        app:layout_constraintStart_toStartOf="@id/layout_nomorTlp" >
+        <EditText
+            android:id="@+id/pimpinan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_password"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/layout_pimpinan"
+        app:layout_constraintEnd_toEndOf="@id/layout_pimpinan"
+        app:layout_constraintStart_toStartOf="@id/layout_pimpinan">
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/register"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/poppinsbold"
         android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="registerUser"
+        android:text="register"
+        android:textColor="@color/WhiteColor"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/login"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_edit_text">
-        <Button
-            android:id="@+id/register"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button"
-            android:fontFamily="@font/poppinsbold"
-            android:gravity="center"
-            android:layout_marginRight="25dp"
-            android:text="register"
-            android:textColor="@color/WhiteColor"
-            android:textSize="20sp"/>
-        <Button
-            android:id="@+id/login"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/register"
-            android:background="@drawable/button"
-            android:fontFamily="@font/poppinsbold"
-            android:gravity="center"
-            android:text="login"
-            android:textColor="@color/WhiteColor"
-            android:textSize="20dp"/>
-    </RelativeLayout>
+        app:layout_constraintTop_toBottomOf="@id/layout_password" />
+    <Button
+        android:id="@+id/login"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/poppinsbold"
+        android:gravity="center"
+        android:text="login"
+        android:textColor="@color/WhiteColor"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="@id/register"
+        app:layout_constraintStart_toEndOf="@id/register"
+        app:layout_constraintBottom_toBottomOf="@id/register"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
