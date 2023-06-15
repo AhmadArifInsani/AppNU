@@ -10,6 +10,7 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,8 +34,7 @@ public class BeritaKegiatan extends AppCompatActivity {
     ImageView ImgBack, ImgHome;
     TextView Title;
     RecyclerView recyclerView;
-    List<BeritaModelAdmin> models;
-    AdapterBeritaAdmin adapter;
+    List<BeritaModelAdmin> models = new ArrayList<>();
     AdapterBerita adapterBerita;
     ProgressDialog progressDialog;
 
@@ -55,21 +55,17 @@ public class BeritaKegiatan extends AppCompatActivity {
         progressDialog.setMessage("Retrieve data..");
 
         ImgBack.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+            onBackPressed();
         });
         ImgHome.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+            startActivity(new Intent(this, HomeActivity.class));
         });
 
-        models = new ArrayList<>();
-        adapterBerita = new AdapterBerita(getApplicationContext(), models);
+        getData();
+        adapterBerita = new AdapterBerita(this, models);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapterBerita);
-    }
-    protected void onStart(){
-        super.onStart();
-        getData();
     }
     private void getData(){
         progressDialog.show();
@@ -82,7 +78,8 @@ public class BeritaKegiatan extends AppCompatActivity {
                         models.clear();
                         if (task.isSuccessful()){
                             for (QueryDocumentSnapshot document : task.getResult()){
-                                BeritaModelAdmin beritaModelAdmin = new BeritaModelAdmin(document.getString("Judul"), document.getString("Deskripsi"), document.getString("Image"));
+                                Log.d("uwu", document.toString());
+                                BeritaModelAdmin beritaModelAdmin = document.toObject(BeritaModelAdmin.class);
                                 //    PosterModel posterModel = document.toObject(PosterModel.class);
                                 //    posterModel.setId(document.getId());
                                 beritaModelAdmin.setId(document.getId());
@@ -96,4 +93,5 @@ public class BeritaKegiatan extends AppCompatActivity {
                     }
                 });
     }
+
 }

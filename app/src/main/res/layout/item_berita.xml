@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dimen_120dp"
+    android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/dimen_16dp"
     android:background="@color/WhiteColor"
     android:elevation="@dimen/dimen_1dp"
@@ -19,14 +19,14 @@
 
         <ImageView
             android:id="@+id/ivThumbnail"
-            android:layout_width="@dimen/dimen_0dp"
-            android:layout_height="match_parent"
+            android:layout_width="140dp"
+            android:layout_height="0dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/image_organisasi_2" />
+            tools:src="@drawable/image_organisasi_1" />
 
         <TextView
             android:id="@+id/tvTitle"

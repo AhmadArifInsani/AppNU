@@ -20,7 +20,7 @@ import com.example.login.model.BeritaModelAdmin;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.ViewHolder>{
+public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.ViewHolder> {
     Context ctx;
     List<BeritaModelAdmin> list;
     LayoutInflater inflater;
@@ -42,8 +42,7 @@ public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.ViewHolder
     public void onBindViewHolder(@NonNull AdapterBerita.ViewHolder holder, int position) {
         BeritaModelAdmin beritaModelAdmin = list.get(position);
         holder.judul.setText(beritaModelAdmin.getJudul());
-        Glide.with(ctx).load(list.get(position).getImage()).into(holder.image);
-        holder.detail.setText(beritaModelAdmin.getDetail());
+        Glide.with(ctx).load(beritaModelAdmin.getImage()).into(holder.image);
         holder.detail.setOnClickListener(view -> {
             Intent intent = new Intent(ctx, DetailBerita.class);
             intent.putExtra("BeritaModel", beritaModelAdmin);
@@ -55,14 +54,15 @@ public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.ViewHolder
     public int getItemCount() {
         return list.size();
     }
-    public class ViewHolder extends RecyclerView.ViewHolder{
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView judul, detail;
         ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             judul = itemView.findViewById(R.id.tvTitle);
-            detail= itemView.findViewById(R.id.tvBacaDetailBerita);
+            detail = itemView.findViewById(R.id.tvBacaDetailBerita);
             image = itemView.findViewById(R.id.ivThumbnail);
         }
     }

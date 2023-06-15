@@ -46,7 +46,7 @@ public class BeritaAdmin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_berita_admin);
         ImgBack = findViewById(R.id.ibBack);
-        recyclerView =findViewById(R.id.rvBerita);
+        recyclerView = findViewById(R.id.rvBerita);
         Title = findViewById(R.id.tvTitle);
         ImgAdd = findViewById(R.id.ivAddButton);
 
@@ -70,12 +70,12 @@ public class BeritaAdmin extends AppCompatActivity {
                 dialog.setItems(dialogitem, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        switch (i){
+                        switch (i) {
                             case 0:
                                 Intent intent = new Intent(getApplicationContext(), TambahBerita.class);
-                                intent.putExtra("id",  models.get(pos).getId());
-                                intent.putExtra("Judul",  models.get(pos).getJudul());
-                                intent.putExtra("Deskripsi",  models.get(pos).getDeskripsi());
+                                intent.putExtra("id", models.get(pos).getId());
+                                intent.putExtra("Judul", models.get(pos).getJudul());
+                                intent.putExtra("Deskripsi", models.get(pos).getDeskripsi());
                                 intent.putExtra("Image", models.get(pos).getImage());
                                 startActivity(intent);
                                 break;
@@ -97,11 +97,13 @@ public class BeritaAdmin extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), TambahBerita.class));
         });
     }
-    protected void onStart(){
+
+    protected void onStart() {
         super.onStart();
         getData();
     }
-    private void getData(){
+
+    private void getData() {
         progressDialog.show();
         mStore.collection("berita")
                 .whereEqualTo("UserId", mAuth.getCurrentUser().getUid())
@@ -111,30 +113,32 @@ public class BeritaAdmin extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         models.clear();
-                        if (task.isSuccessful()){
-                            for (QueryDocumentSnapshot document : task.getResult()){
-                                BeritaModelAdmin beritaModelAdmin = new BeritaModelAdmin(document.getString("Judul"), document.getString("Deskripsi"), document.getString("Image"));
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                BeritaModelAdmin beritaModelAdmin = document.toObject(BeritaModelAdmin.class
+                                );
                                 //    PosterModel posterModel = document.toObject(PosterModel.class);
                                 //    posterModel.setId(document.getId());
                                 beritaModelAdmin.setId(document.getId());
                                 models.add(beritaModelAdmin);
                             }
                             adapter.notifyDataSetChanged();
-                        }else{
+                        } else {
                             Toast.makeText(getApplicationContext(), "Data failed to fetch!", Toast.LENGTH_SHORT).show();
                         }
                         progressDialog.dismiss();
                     }
                 });
     }
-    private void deleteData(String id){
+
+    private void deleteData(String id) {
         progressDialog.show();
         mStore.collection("berita").document(id)
                 .delete()
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if (!task.isSuccessful()){
+                        if (!task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Data failed to delete", Toast.LENGTH_SHORT).show();
                         }
                         progressDialog.dismiss();

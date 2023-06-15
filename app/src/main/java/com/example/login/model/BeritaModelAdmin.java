@@ -3,28 +3,57 @@ package com.example.login.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.firebase.firestore.Exclude;
+
 public class BeritaModelAdmin implements Parcelable {
-    private String id, judul, deskripsi, image, userIdUploader, detail;
+    private String id, Judul, Deskripsi, Image, UserId;
 
-    public BeritaModelAdmin(){
+    public BeritaModelAdmin() {
     }
 
-    public BeritaModelAdmin(String id, String judul, String deskripsi, String image, String userIdUploader, String detail) {
-        this.userIdUploader = userIdUploader;
-        this.detail = detail;
+    public BeritaModelAdmin(String judul, String deskripsi, String image, String userIdUploader) {
+        this.Judul = judul;
+        this.Deskripsi = deskripsi;
+        this.Image = image;
+        this.UserId = userIdUploader;
+    }
+
+    public void setId(String id) {
         this.id = id;
-        this.judul = judul;
-        this.deskripsi = deskripsi;
-        this.image = image;
     }
+
+    public void setUserId(String userId) {
+        this.UserId = userId;
+    }
+
+    @Exclude
+    public String getId() {
+        return id;
+    }
+
+    public String getJudul() {
+        return Judul;
+    }
+
+    public String getDeskripsi() {
+        return Deskripsi;
+    }
+
+    public String getImage() {
+        return Image;
+    }
+
+    public String getUserId() {
+        return UserId;
+    }
+
 
     protected BeritaModelAdmin(Parcel in) {
-        userIdUploader = in.readString();
-        detail = in.readString();
         id = in.readString();
-        judul = in.readString();
-        deskripsi = in.readString();
-        image = in.readString();
+        Judul = in.readString();
+        Deskripsi = in.readString();
+        Image = in.readString();
+        UserId = in.readString();
     }
 
     public static final Creator<BeritaModelAdmin> CREATOR = new Creator<BeritaModelAdmin>() {
@@ -38,59 +67,6 @@ public class BeritaModelAdmin implements Parcelable {
             return new BeritaModelAdmin[size];
         }
     };
-    public BeritaModelAdmin(String judul, String deskripsi, String image) {
-        this.judul = judul;
-        this.deskripsi = deskripsi;
-        this.image = image;
-    }
-
-    public String getDetail() {
-        return detail;
-    }
-
-    public void setDetail(String detail) {
-        this.detail = detail;
-    }
-
-    public String getUserIdUploader() {
-        return userIdUploader;
-    }
-
-    public void setUserIdUploader(String userIdUploader) {
-        this.userIdUploader = userIdUploader;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getJudul() {
-        return judul;
-    }
-
-    public void setJudul(String judul) {
-        this.judul = judul;
-    }
-
-    public String getDeskripsi() {
-        return deskripsi;
-    }
-
-    public void setDeskripsi(String deskripsi) {
-        this.deskripsi = deskripsi;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
 
     @Override
     public int describeContents() {
@@ -99,10 +75,10 @@ public class BeritaModelAdmin implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(userIdUploader);
         parcel.writeString(id);
-        parcel.writeString(judul);
-        parcel.writeString(deskripsi);
-        parcel.writeString(image);
+        parcel.writeString(Judul);
+        parcel.writeString(Deskripsi);
+        parcel.writeString(Image);
+        parcel.writeString(UserId);
     }
 }
