@@ -37,7 +37,7 @@ public class ProfilActivity extends AppCompatActivity {
     private ImageView ImgBack;
     private Button btnLogout, btnEdit;
     CircleImageView ftoProfil;
-    private TextView TxtName, TxtNomorTlp, TxtEmail, TxtPimpinan, TxtBirthday, Title;
+    private TextView TxtName, TxtNomorTlp, TxtEmail, TxtPimpinan, TxtBirthday, Title, TxtBerita, TxtPoster;
     String userId;
 
     @SuppressLint("MissingInflatedId")
@@ -56,20 +56,25 @@ public class ProfilActivity extends AppCompatActivity {
         TxtBirthday = findViewById(R.id.text_birthday);
         Title = findViewById(R.id.tvTitle);
         ftoProfil = findViewById(R.id.profil);
+        TxtBerita = findViewById(R.id.text_berita);
+        TxtPoster = findViewById(R.id.text_poster);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         mAuth = FirebaseAuth.getInstance();
         mStore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
-
-        if (mAuth.getCurrentUser() != null){
-            userId = mAuth.getCurrentUser().getUid();
-        }
+        userId = mAuth.getCurrentUser().getUid();
 
         Title.setText("Profil");
 
         ImgBack.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+        });
+        TxtBerita.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), BeritaAdmin.class));
+        });
+        TxtPoster.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), PosterAdmin.class));
         });
 
         StorageReference profileRef = storageReference.child("users/"+mAuth.getCurrentUser().getUid()+"profile.jpg");

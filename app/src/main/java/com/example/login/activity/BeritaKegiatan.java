@@ -3,21 +3,22 @@ package com.example.login.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.login.R;
+import com.example.login.adapter.AdapterBerita;
+import com.example.login.adapter.AdapterBeritaAdmin;
 import com.example.login.adapter.AdapterSosialMedia;
-import com.example.login.adapter.AdapterSosialMediaAdmin;
-import com.example.login.model.PosterModelAdmin;
+import com.example.login.model.BeritaModelAdmin;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -27,36 +28,29 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SosialMediaActivity extends AppCompatActivity {
+public class BeritaKegiatan extends AppCompatActivity {
     FirebaseFirestore mStore;
     ImageView ImgBack, ImgHome;
     TextView Title;
     RecyclerView recyclerView;
-    List<PosterModelAdmin> list;
-    AdapterSosialMediaAdmin adapter;
+    List<BeritaModelAdmin> models;
+    AdapterBeritaAdmin adapter;
+    AdapterBerita adapterBerita;
     ProgressDialog progressDialog;
-    //List<String> text;
-   // List<Integer> image;
-   // AdapterSosialMedia adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sosial_media);
-
+        setContentView(R.layout.activity_berita_kegiatan);
         ImgBack = findViewById(R.id.ibBack);
         ImgHome = findViewById(R.id.ivHomeButton);
-        recyclerView =findViewById(R.id.recyclerView);
+        recyclerView =findViewById(R.id.rvBerita);
         Title = findViewById(R.id.tvTitle);
 
         mStore = FirebaseFirestore.getInstance();
 
-        //text = new ArrayList<>();
-       // image = new ArrayList<>();
-
-        Title.setText("Poster Event");
-
-        progressDialog = new ProgressDialog(SosialMediaActivity.this);
+        Title.setText("Berita Kegiatan");
+        progressDialog = new ProgressDialog(BeritaKegiatan.this);
         progressDialog.setTitle("Loading..");
         progressDialog.setMessage("Retrieve data..");
 
@@ -67,33 +61,11 @@ public class SosialMediaActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
         });
 
-        //text.add("A");
-       // text.add("A");
-       // text.add("A");
-      //  text.add("A");
-      //  text.add("A");
-       // text.add("A");
-       // text.add("A");
-      //  text.add("A");
-
-      //  image.add(R.drawable.image_sosialmedia_1);
-      //  image.add(R.drawable.image_sosialmedia_2);
-      //  image.add(R.drawable.image_sosialmedia_3);
-     //   image.add(R.drawable.image_sosialmedia_4);
-      //  image.add(R.drawable.image_sosialmedia_1);
-      //  image.add(R.drawable.image_sosialmedia_2);
-      //  image.add(R.drawable.image_sosialmedia_3);
-      //  image.add(R.drawable.image_sosialmedia_4);
-
-        //adapter = new AdapterSosialMedia(this, text, image);
-       // GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
-       // recyclerView.setLayoutManager(gridLayoutManager);
-       // recyclerView.setAdapter(adapter);
-        list = new ArrayList<>();
-        adapter = new AdapterSosialMediaAdmin(getApplicationContext(), list);
-        RecyclerView.LayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(gridLayoutManager);
-        recyclerView.setAdapter(adapter);
+        models = new ArrayList<>();
+        adapterBerita = new AdapterBerita(getApplicationContext(), models);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(adapterBerita);
     }
     protected void onStart(){
         super.onStart();
@@ -101,22 +73,22 @@ public class SosialMediaActivity extends AppCompatActivity {
     }
     private void getData(){
         progressDialog.show();
-        mStore.collection("poster")
+        mStore.collection("berita")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        list.clear();
+                        models.clear();
                         if (task.isSuccessful()){
                             for (QueryDocumentSnapshot document : task.getResult()){
-                                PosterModelAdmin posterModelAdmin = new PosterModelAdmin(document.getString("Judul"), document.getString("Deskripsi"), document.getString("Image"));
+                                BeritaModelAdmin beritaModelAdmin = new BeritaModelAdmin(document.getString("Judul"), document.getString("Deskripsi"), document.getString("Image"));
                                 //    PosterModel posterModel = document.toObject(PosterModel.class);
                                 //    posterModel.setId(document.getId());
-                                posterModelAdmin.setId(document.getId());
-                                list.add(posterModelAdmin);
+                                beritaModelAdmin.setId(document.getId());
+                                models.add(beritaModelAdmin);
                             }
-                            adapter.notifyDataSetChanged();
+                            adapterBerita.notifyDataSetChanged();
                         }else{
                             Toast.makeText(getApplicationContext(), "Data failed to fetch!", Toast.LENGTH_SHORT).show();
                         }

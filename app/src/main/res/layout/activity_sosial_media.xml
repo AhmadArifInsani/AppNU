@@ -16,9 +16,19 @@
     
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="@dimen/dimen_0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        tools:listitem="@layout/item_poster_admin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tbToolbar"/>
+        app:layout_constraintTop_toBottomOf="@id/tbToolbar"
+        app:layout_constraintBottom_toTopOf="@id/nvNavBar"/>
+    <include
+        android:id="@+id/nvNavBar"
+        layout="@layout/layout_bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,29 +20,20 @@
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout3"
-        android:layout_width="@dimen/dimen_60dp"
-        android:layout_height="@dimen/dimen_60dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="25dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profil"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="45dp"
         android:background="@drawable/background_profil"
-        android:gravity="center"
+        android:src="@drawable/person"
+        app:civ_border_color="@color/abuabu"
+        app:civ_border_width="@dimen/_2sdp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="@dimen/dimen_60dp"
-            android:layout_height="@dimen/dimen_60dp"
-            android:minWidth="70dp"
-            android:src="@drawable/person"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </RelativeLayout>
+        app:layout_constraintTop_toTopOf="@id/textView"
+        app:layout_constraintBottom_toBottomOf="@id/textView"/>
 
 
     <LinearLayout
@@ -54,7 +45,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/relativeLayout3">
+        app:layout_constraintTop_toBottomOf="@id/profil">
 
         <com.denzcoskun.imageslider.ImageSlider
             android:id="@+id/slide"
@@ -71,13 +62,14 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="515dp"
+        android:layout_height="@dimen/dimen_0dp"
         android:background="@drawable/background_white"
         android:gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:paddingTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nvNavBar"
         app:layout_constraintTop_toBottomOf="@id/layout_slider">
 
         <RelativeLayout

@@ -6,11 +6,11 @@ public class UserHelperClass {
     public UserHelperClass() {
     }
 
-    public UserHelperClass(String nama, String email, String password, String nomorTelepon) {
+    public UserHelperClass(String nama, String email, String password, String nomorTlp) {
         this.nama = nama;
         this.email = email;
         this.password = password;
-        this.nomorTlp = nomorTelepon;
+        this.nomorTlp = nomorTlp;
     }
 
     public String getNama() {

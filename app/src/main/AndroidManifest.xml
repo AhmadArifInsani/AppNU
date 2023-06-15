@@ -17,6 +17,33 @@
         android:theme="@style/Theme.Login"
         tools:targetApi="31">
         <activity
+            android:name=".activity.TambahBerita"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DetailBerita"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ItemBerita"
+            android:exported="false" />
+        <activity
+            android:name=".activity.BeritaAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".activity.BeritaKegiatan"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TambahPosterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PosterAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ItemPosterAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ItemSosialMedia"
+            android:exported="false" />
+        <activity
             android:name=".activity.SosialMedia1"
             android:exported="false" />
         <activity
@@ -70,9 +97,7 @@
         <activity
             android:name=".activity.RegisterActivity"
             android:exported="true"
-            android:label="Register">
-
-        </activity>
+            android:label="Register" />
         <activity
             android:name=".activity.LoginActivity"
             android:exported="true"
@@ -83,7 +108,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activity.MainActivity"
             android:exported="true" />

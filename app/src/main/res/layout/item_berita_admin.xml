@@ -15,55 +15,32 @@
         android:background="@drawable/menu_abu_radius10"
         android:padding="@dimen/dimen_16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:id="@+id/ivThumbnail"
+            android:id="@+id/ivThumbnailAdm"
             android:layout_width="@dimen/dimen_160dp"
             android:layout_height="@dimen/dimen_0dp"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="@id/btnHapus"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="h,16:9"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tvTitle"
+            app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/image_organisasi_2" />
 
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/tvTitleAdm"
             style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/ivThumbnail"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivThumbnailAdm"
+            app:layout_constraintTop_toTopOf="@id/ivThumbnailAdm"
+            app:layout_constraintBottom_toBottomOf="@id/ivThumbnailAdm"
             tools:text="aasdasdsadasdadDKOkasdasdsadasdadDKOkasdasdsadasdadDKOkasdasdsadasdadDKOkasdasdsadasdadDKOksdasdsadasdadDKOk" />
 
-        <Button
-            android:id="@+id/btnEdit"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="@dimen/dimen_8dp"
-            android:background="@drawable/button"
-            android:text="@string/action_edit"
-            android:textColor="@color/WhiteColor"
-            app:layout_constraintEnd_toStartOf="@id/btnHapus"
-            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <Button
-            android:id="@+id/btnHapus"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_30sdp"
-            android:background="@drawable/button"
-            android:text="@string/action_hapus"
-            android:textColor="@color/WhiteColor"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/btnEdit"
-            tools:ignore="TouchTargetSizeCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

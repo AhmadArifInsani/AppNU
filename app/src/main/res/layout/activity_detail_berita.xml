@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.DetailBeritaActivity">
-
+    tools:context=".activity.DetailBerita">
     <include
         android:id="@+id/tbToolbar"
         layout="@layout/layout_toolbar"
@@ -17,7 +16,7 @@
     <ScrollView
         android:layout_width="350dp"
         android:layout_height="@dimen/dimen_0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nvNavBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tbToolbar">
@@ -25,7 +24,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dimen_16dp">
+            android:padding="@dimen/_15sdp">
 
             <ImageView
                 android:id="@+id/ivThumbnail"
@@ -96,4 +95,5 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

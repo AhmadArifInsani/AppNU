@@ -56,7 +56,7 @@ public class EditProfilActivity extends AppCompatActivity {
     FirebaseFirestore mStore;
     FirebaseUser user;
     private ImageView ImgBack;
-    TextView ubhFoto;
+    TextView ubhFoto, Title;
     CircleImageView ftoProfil;
     EditText EtNama, EtEmail, EtPimpinan, EtBirthday, EtNomorTlp;
     Button btnSave;
@@ -74,17 +74,19 @@ public class EditProfilActivity extends AppCompatActivity {
         EtNomorTlp = findViewById(R.id.etNomorTlp);
         ImgBack = findViewById(R.id.ibBack);
         ubhFoto = findViewById(R.id.text_ubah_foto);
+        Title = findViewById(R.id.tvTitle);
         ftoProfil = findViewById(R.id.profil);
         btnSave = findViewById(R.id.btn_simpan);
 
         mAuth = FirebaseAuth.getInstance();
         mStore = FirebaseFirestore.getInstance();
         user = mAuth.getCurrentUser();
-
         userId = mAuth.getCurrentUser().getUid();
         storageReference = FirebaseStorage.getInstance().getReference();
-        DocumentReference documentReference = mStore.collection("users").document(userId);
 
+        Title.setText("Edit Profil");
+
+        DocumentReference documentReference = mStore.collection("users").document(userId);
         StorageReference profileRef = storageReference.child("users/"+mAuth.getCurrentUser().getUid()+"profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
@@ -155,9 +157,7 @@ public class EditProfilActivity extends AppCompatActivity {
         EtBirthday.setText(birthday);
         EtNomorTlp.setText(nomorTlp);
 
-
         Log.d(TAG, "onCreate:" + nama + " " + email + " " + pimpinan + " " + birthday + " " + nomorTlp);
-
     }
 
     @Override
@@ -171,7 +171,6 @@ public class EditProfilActivity extends AppCompatActivity {
             }
         }
     }
-
     private void uploadImageToFirebase(Uri imageUri) {
         StorageReference fileRef = storageReference.child("users/"+mAuth.getCurrentUser().getUid()+"profile.jpg");
         fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

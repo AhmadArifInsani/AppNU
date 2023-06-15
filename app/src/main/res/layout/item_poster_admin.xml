@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimen_16dp"
+    android:background="@color/WhiteColor"
+    android:elevation="@dimen/dimen_1dp"
+    android:layout_gravity="center_horizontal"
+    tools:context=".activity.ItemPosterAdmin">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background_1"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_abu_radius10"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgJudul"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_sosialmedia_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txJudul"/>
+
+        <TextView
+            android:id="@+id/txJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="NGOPI (Ngobrol Perkara Ikatan) Sosialisasi Bersama Rekan Ketua"
+            android:textAlignment="center"
+            android:textColor="@color/BlackColor"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgJudul"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

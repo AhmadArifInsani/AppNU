@@ -6,8 +6,8 @@
     android:layout_height="@dimen/dimen_120dp"
     android:layout_marginBottom="@dimen/dimen_16dp"
     android:background="@color/WhiteColor"
-    android:elevation="@dimen/dimen_1dp">
-
+    android:elevation="@dimen/dimen_1dp"
+    tools:context=".activity.ItemBerita">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cvContainer"
         android:layout_width="match_parent"

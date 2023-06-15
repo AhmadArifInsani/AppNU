@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="@dimen/dimen_4dp">
-
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolbarHeight"
@@ -15,10 +14,10 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/ivHomeButton"
+        android:id="@+id/ivAddButton"
         android:layout_width="@dimen/_37sdp"
         android:layout_height="@dimen/_37sdp"
-        android:src="@drawable/ic_home_button"
+        android:src="@drawable/ic_button_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

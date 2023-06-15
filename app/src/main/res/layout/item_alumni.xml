@@ -70,8 +70,8 @@
             android:fontFamily="@font/poppinsregular"
             android:textColor="@color/BlackColor"
             app:layout_constraintStart_toEndOf="@id/pimpinan_1"
-            app:layout_constraintTop_toBottomOf="@id/tvTitle"
-            app:layout_constraintBottom_toTopOf="@id/line"
+            app:layout_constraintTop_toTopOf="@id/pimpinan_1"
+            app:layout_constraintBottom_toBottomOf="@id/pimpinan_1"
             app:layout_constraintEnd_toEndOf="parent"/>
         <ImageView
             android:id="@+id/line"
@@ -81,7 +81,7 @@
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             android:src="@drawable/line"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/pimpinan_1" />
+            app:layout_constraintTop_toBottomOf="@id/layout_masa_jabatan" />
         <TextView
             android:id="@+id/tanggal_lahir"
             style="@style/TextAppearance.MaterialComponents.Subtitle2"
