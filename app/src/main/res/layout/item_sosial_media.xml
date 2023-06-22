@@ -9,7 +9,7 @@
     android:background="@color/WhiteColor"
     android:elevation="@dimen/dimen_1dp"
     android:layout_gravity="center_horizontal"
-    tools:context=".activity.ItemSosialMedia">
+    tools:context=".activity.ItemPoster">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/background_1"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imgJudul"
+            android:id="@+id/ivJudulPoster"
             android:layout_width="120dp"
             android:layout_height="150dp"
             android:layout_centerHorizontal="true"
@@ -31,10 +31,10 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/txtJudul"/>
+            app:layout_constraintBottom_toTopOf="@id/tvJudulPoster"/>
 
         <TextView
-            android:id="@+id/txtJudul"
+            android:id="@+id/tvJudulPoster"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
@@ -45,7 +45,7 @@
             android:textSize="8sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgJudul"
+            app:layout_constraintTop_toBottomOf="@id/ivJudulPoster"
             app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

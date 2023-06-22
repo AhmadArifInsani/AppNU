@@ -15,17 +15,15 @@ import com.bumptech.glide.Glide;
 import com.example.login.R;
 import com.example.login.activity.DetailBerita;
 import com.example.login.model.BeritaModel;
-import com.example.login.model.BeritaModelAdmin;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.ViewHolder> {
     Context ctx;
-    List<BeritaModelAdmin> list;
+    List<BeritaModel> list;
     LayoutInflater inflater;
 
-    public AdapterBerita(Context ctx, List<BeritaModelAdmin> list) {
+    public AdapterBerita(Context ctx, List<BeritaModel> list) {
         this.ctx = ctx;
         this.list = list;
         this.inflater = LayoutInflater.from(ctx);
@@ -40,12 +38,12 @@ public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull AdapterBerita.ViewHolder holder, int position) {
-        BeritaModelAdmin beritaModelAdmin = list.get(position);
-        holder.judul.setText(beritaModelAdmin.getJudul());
-        Glide.with(ctx).load(beritaModelAdmin.getImage()).into(holder.image);
+        BeritaModel beritaModel = list.get(position);
+        holder.judul.setText(beritaModel.getJudul());
+        Glide.with(ctx).load(beritaModel.getImage()).into(holder.image);
         holder.detail.setOnClickListener(view -> {
             Intent intent = new Intent(ctx, DetailBerita.class);
-            intent.putExtra("BeritaModel", beritaModelAdmin);
+            intent.putExtra("BeritaModel", beritaModel);
             ctx.startActivity(intent);
         });
     }

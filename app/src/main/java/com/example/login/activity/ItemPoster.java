@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.login.R;
 
-public class SosialMedia1 extends AppCompatActivity {
+public class ItemPoster extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sosial_media1);
+        setContentView(R.layout.item_sosial_media);
     }
 }

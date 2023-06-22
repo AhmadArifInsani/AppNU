@@ -56,9 +56,6 @@
                     android:minHeight="@dimen/dimen_48dp"
                     tools:ignore="SpeakableTextPresentCheck"/>
             </com.google.android.material.textfield.TextInputLayout>
-
-
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilDeskripsi"
                 android:layout_width="0dp"

@@ -2,7 +2,6 @@ package com.example.login.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,9 +16,7 @@ import android.widget.Toast;
 
 import com.example.login.R;
 import com.example.login.adapter.AdapterBerita;
-import com.example.login.adapter.AdapterBeritaAdmin;
-import com.example.login.adapter.AdapterSosialMedia;
-import com.example.login.model.BeritaModelAdmin;
+import com.example.login.model.BeritaModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -34,7 +31,7 @@ public class BeritaKegiatan extends AppCompatActivity {
     ImageView ImgBack, ImgHome;
     TextView Title;
     RecyclerView recyclerView;
-    List<BeritaModelAdmin> models = new ArrayList<>();
+    List<BeritaModel> models = new ArrayList<>();
     AdapterBerita adapterBerita;
     ProgressDialog progressDialog;
 
@@ -55,7 +52,7 @@ public class BeritaKegiatan extends AppCompatActivity {
         progressDialog.setMessage("Retrieve data..");
 
         ImgBack.setOnClickListener(view -> {
-            onBackPressed();
+            startActivity(new Intent(this, HomeActivity.class));
         });
         ImgHome.setOnClickListener(view -> {
             startActivity(new Intent(this, HomeActivity.class));
@@ -79,11 +76,11 @@ public class BeritaKegiatan extends AppCompatActivity {
                         if (task.isSuccessful()){
                             for (QueryDocumentSnapshot document : task.getResult()){
                                 Log.d("uwu", document.toString());
-                                BeritaModelAdmin beritaModelAdmin = document.toObject(BeritaModelAdmin.class);
+                                BeritaModel beritaModel = document.toObject(BeritaModel.class);
                                 //    PosterModel posterModel = document.toObject(PosterModel.class);
                                 //    posterModel.setId(document.getId());
-                                beritaModelAdmin.setId(document.getId());
-                                models.add(beritaModelAdmin);
+                                beritaModel.setId(document.getId());
+                                models.add(beritaModel);
                             }
                             adapterBerita.notifyDataSetChanged();
                         }else{

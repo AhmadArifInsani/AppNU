@@ -4,21 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 
-import com.example.login.activity.HomeActivity;
 import com.example.login.activity.KaderisasiActivity;
 import com.example.login.model.KaderisasiModel;
 
 
 public class PdfView extends AppCompatActivity {
     private WebView webView;
-    private String linkURL;
     private ImageView ImgBack;
     private KaderisasiModel kaderisasiModel;
 

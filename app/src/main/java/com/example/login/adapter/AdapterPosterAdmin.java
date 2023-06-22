@@ -16,7 +16,7 @@ import com.example.login.model.PosterModelAdmin;
 
 import java.util.List;
 
-public class AdapterSosialMediaAdmin extends RecyclerView.Adapter<AdapterSosialMediaAdmin.ViewHolder> {
+public class AdapterPosterAdmin extends RecyclerView.Adapter<AdapterPosterAdmin.ViewHolder> {
     Context context;
     List<PosterModelAdmin> models;
     Dialog dialog;
@@ -27,20 +27,20 @@ public class AdapterSosialMediaAdmin extends RecyclerView.Adapter<AdapterSosialM
     public void setDialog(Dialog dialog){
         this.dialog = dialog;
     }
-    public AdapterSosialMediaAdmin(Context context, List<PosterModelAdmin> models){
+    public AdapterPosterAdmin(Context context, List<PosterModelAdmin> models){
         this.context = context;
         this.models = models;
     }
     @NonNull
     @Override
-    public AdapterSosialMediaAdmin.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AdapterPosterAdmin.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.item_poster_admin,parent,false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterSosialMediaAdmin.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AdapterPosterAdmin.ViewHolder holder, int position) {
         PosterModelAdmin posterModelAdmin = models.get(position);
         holder.judul.setText(posterModelAdmin.getJudul());
         Glide.with(context).load(models.get(position).getImage()).into(holder.image);

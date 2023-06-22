@@ -192,7 +192,6 @@ public class TambahBerita extends AppCompatActivity {
         user.put("Judul", judul);
         user.put("Deskripsi", deskripsi);
         user.put("Image", image);
-
         progressDialog.show();
         if (idBerita != null) {
             mStore.collection("berita").document(idBerita)

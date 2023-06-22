@@ -116,6 +116,5 @@ public class ProfilActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             finish();
         });
-
     }
 }

@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <LinearLayout
-        android:id="@+id/search"
+        android:id="@+id/layout_search"
         android:layout_width="@dimen/_270sdp"
         android:layout_height="40dp"
         android:background="@drawable/menu_abu_radius10"
@@ -25,6 +25,7 @@
         app:layout_constraintTop_toBottomOf="@id/tbToolbar">
 
         <SearchView
+            android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginRight="10dp"
@@ -32,14 +33,14 @@
             android:queryHint="Cari Nama" />
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvBerita"
+        android:id="@+id/rvDataAnggota"
         android:layout_width="350dp"
         android:layout_height="@dimen/dimen_0dp"
         android:layout_marginTop="@dimen/_10sdp"
         app:layout_constraintBottom_toTopOf="@id/nvNavBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search"
+        app:layout_constraintTop_toBottomOf="@+id/layout_search"
         tools:listitem="@layout/item_data_anggota" />
     <include
         android:id="@+id/nvNavBar"

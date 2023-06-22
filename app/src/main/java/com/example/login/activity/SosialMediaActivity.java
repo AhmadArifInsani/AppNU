@@ -9,14 +9,13 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.login.R;
-import com.example.login.adapter.AdapterSosialMedia;
-import com.example.login.adapter.AdapterSosialMediaAdmin;
+import com.example.login.adapter.AdapterPoster;
+import com.example.login.adapter.AdapterPosterAdmin;
 import com.example.login.model.PosterModelAdmin;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -33,7 +32,7 @@ public class SosialMediaActivity extends AppCompatActivity {
     TextView Title;
     RecyclerView recyclerView;
     List<PosterModelAdmin> list;
-    AdapterSosialMediaAdmin adapter;
+    AdapterPoster adapter;
     ProgressDialog progressDialog;
     //List<String> text;
    // List<Integer> image;
@@ -67,30 +66,8 @@ public class SosialMediaActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
         });
 
-        //text.add("A");
-       // text.add("A");
-       // text.add("A");
-      //  text.add("A");
-      //  text.add("A");
-       // text.add("A");
-       // text.add("A");
-      //  text.add("A");
-
-      //  image.add(R.drawable.image_sosialmedia_1);
-      //  image.add(R.drawable.image_sosialmedia_2);
-      //  image.add(R.drawable.image_sosialmedia_3);
-     //   image.add(R.drawable.image_sosialmedia_4);
-      //  image.add(R.drawable.image_sosialmedia_1);
-      //  image.add(R.drawable.image_sosialmedia_2);
-      //  image.add(R.drawable.image_sosialmedia_3);
-      //  image.add(R.drawable.image_sosialmedia_4);
-
-        //adapter = new AdapterSosialMedia(this, text, image);
-       // GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
-       // recyclerView.setLayoutManager(gridLayoutManager);
-       // recyclerView.setAdapter(adapter);
         list = new ArrayList<>();
-        adapter = new AdapterSosialMediaAdmin(getApplicationContext(), list);
+        adapter = new AdapterPoster(this, list);
         RecyclerView.LayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
@@ -110,7 +87,8 @@ public class SosialMediaActivity extends AppCompatActivity {
                         list.clear();
                         if (task.isSuccessful()){
                             for (QueryDocumentSnapshot document : task.getResult()){
-                                PosterModelAdmin posterModelAdmin = new PosterModelAdmin(document.getString("Judul"), document.getString("Deskripsi"), document.getString("Image"));
+                                PosterModelAdmin posterModelAdmin = document.toObject(PosterModelAdmin.class);
+                                //PosterModelAdmin posterModelAdmin = new PosterModelAdmin(document.getString("Judul"), document.getString("Deskripsi"), document.getString("Image"));
                                 //    PosterModel posterModel = document.toObject(PosterModel.class);
                                 //    posterModel.setId(document.getId());
                                 posterModelAdmin.setId(document.getId());

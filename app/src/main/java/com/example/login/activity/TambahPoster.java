@@ -40,7 +40,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TambahPosterActivity extends AppCompatActivity {
+public class TambahPoster extends AppCompatActivity {
     FirebaseFirestore mStore;
     FirebaseAuth mAuth;
     ImageView ImgBack, ImgHome, edtImage;
@@ -67,7 +67,7 @@ public class TambahPosterActivity extends AppCompatActivity {
         mStore = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
 
-        progressDialog = new ProgressDialog(TambahPosterActivity.this);
+        progressDialog = new ProgressDialog(TambahPoster.this);
         progressDialog.setTitle("Loading");
         progressDialog.setMessage("Saving...");
 
@@ -99,7 +99,7 @@ public class TambahPosterActivity extends AppCompatActivity {
     }
     private void selectImage(){
         final CharSequence[] items = {"Take Photo", "Choose from Library", "Cancel"};
-        AlertDialog.Builder builder = new AlertDialog.Builder(TambahPosterActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(TambahPoster.this);
         builder.setTitle(getString(R.string.app_name));
         builder.setIcon(R.mipmap.ic_launcher);
         builder.setItems(items, (dialog, item)->{

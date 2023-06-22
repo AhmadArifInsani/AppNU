@@ -19,7 +19,6 @@ import java.util.List;
 
 public class KaderisasiActivity extends AppCompatActivity {
     private ImageView ImgBack, ImgHome;
-//    private Button BtnView1;
     private RecyclerView rvKaderisasi;
     TextView Title;
     ArrayList<KaderisasiModel> listKaderisasi;

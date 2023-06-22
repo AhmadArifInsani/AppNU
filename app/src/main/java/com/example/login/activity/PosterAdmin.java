@@ -16,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.login.R;
-import com.example.login.adapter.AdapterSosialMediaAdmin;
+import com.example.login.adapter.AdapterPosterAdmin;
 import com.example.login.model.PosterModelAdmin;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -35,7 +35,7 @@ public class PosterAdmin extends AppCompatActivity {
     TextView Title;
     RecyclerView recyclerView;
     List<PosterModelAdmin> list;
-    AdapterSosialMediaAdmin adapter;
+    AdapterPosterAdmin adapter;
     ProgressDialog progressDialog;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -56,11 +56,11 @@ public class PosterAdmin extends AppCompatActivity {
         progressDialog.setMessage("Retrieve data..");
 
         list = new ArrayList<>();
-        adapter = new AdapterSosialMediaAdmin(getApplicationContext(), list);
+        adapter = new AdapterPosterAdmin(getApplicationContext(), list);
         RecyclerView.LayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
-        adapter.setDialog(new AdapterSosialMediaAdmin.Dialog() {
+        adapter.setDialog(new AdapterPosterAdmin.Dialog() {
             @Override
             public void onClick(int pos) {
                 final CharSequence[] dialogitem = {"Edit", "Delete"};
@@ -70,7 +70,7 @@ public class PosterAdmin extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         switch (i){
                             case 0:
-                                Intent intent = new Intent(getApplicationContext(), TambahPosterActivity.class);
+                                Intent intent = new Intent(getApplicationContext(), TambahPoster.class);
                                 intent.putExtra("id",  list.get(pos).getId());
                                 intent.putExtra("Judul",  list.get(pos).getJudul());
                                 intent.putExtra("Deskripsi",  list.get(pos).getDeskripsi());
@@ -92,7 +92,7 @@ public class PosterAdmin extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), ProfilActivity.class));
         });
         ImgAdd.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), TambahPosterActivity.class));
+            startActivity(new Intent(getApplicationContext(), TambahPoster.class));
         });
 
     }
@@ -112,9 +112,7 @@ public class PosterAdmin extends AppCompatActivity {
                         list.clear();
                         if (task.isSuccessful()){
                             for (QueryDocumentSnapshot document : task.getResult()){
-                                PosterModelAdmin posterModelAdmin = new PosterModelAdmin(document.getString("Judul"), document.getString("Deskripsi"), document.getString("Image"));
-                                //    PosterModel posterModel = document.toObject(PosterModel.class);
-                                //    posterModel.setId(document.getId());
+                                PosterModelAdmin posterModelAdmin = document.toObject(PosterModelAdmin.class);
                                 posterModelAdmin.setId(document.getId());
                                 list.add(posterModelAdmin);
                             }

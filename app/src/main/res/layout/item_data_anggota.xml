@@ -28,7 +28,7 @@
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/foto_profil" />
+            tools:src="@drawable/person" />
 
         <TextView
             android:id="@+id/tvTitle"
@@ -38,7 +38,7 @@
             android:fontFamily="@font/poppinsbold"
             android:textColor="@color/BlackColor"
             android:layout_marginStart="@dimen/dimen_16dp"
-            android:textSize="14sp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@id/line"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivThumbnail"
@@ -55,7 +55,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvTitle" />
         <TextView
             android:id="@+id/tanggal_lahir"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            style="@style/TextAppearance.MaterialComponents.Caption"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsregular"
@@ -68,7 +68,7 @@
             app:layout_constraintEnd_toEndOf="parent"/>
         <TextView
             android:id="@+id/email"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            style="@style/TextAppearance.MaterialComponents.Caption"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsregular"
@@ -81,7 +81,7 @@
             app:layout_constraintEnd_toEndOf="parent"/>
         <TextView
             android:id="@+id/pimpinan"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            style="@style/TextAppearance.MaterialComponents.Caption"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsregular"
@@ -107,7 +107,8 @@
                 android:id="@+id/nomor_whatsapp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="15sp"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:textSize="16sp"
                 android:gravity="center_vertical"
                 android:text="+62 897-8768-8768"
                 android:textColor="@color/BlackColor"

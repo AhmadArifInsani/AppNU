@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteColor"
+    tools:context=".activity.DetailPoster">
+
+    <include
+        android:id="@+id/tbToolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        app:layout_constraintBottom_toTopOf="@id/nvNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbToolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="500dp"
+                android:src="@drawable/image_sosialmedia_2"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/detail"
+                />
+            <TextView
+                android:id="@+id/detail"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:text="...selengkapnyaasdasdkas dkja sdkj asdka skd askdjkas dkas dk "
+                android:textSize="13sp"
+                android:textColor="@color/BlackColor"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@id/image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+    <include
+        android:id="@+id/nvNavBar"
+        layout="@layout/layout_bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

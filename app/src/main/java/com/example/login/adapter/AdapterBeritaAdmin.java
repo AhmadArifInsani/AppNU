@@ -12,13 +12,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.login.R;
-import com.example.login.model.BeritaModelAdmin;
+import com.example.login.model.BeritaModel;
 
 import java.util.List;
 
 public class AdapterBeritaAdmin extends RecyclerView.Adapter<AdapterBeritaAdmin.ViewHolder> {
     Context context;
-    List<BeritaModelAdmin> models;
+    List<BeritaModel> models;
     Dialog dialog;
     public interface Dialog{
         void onClick(int pos);
@@ -27,7 +27,7 @@ public class AdapterBeritaAdmin extends RecyclerView.Adapter<AdapterBeritaAdmin.
         this.dialog = dialog;
     }
 
-    public AdapterBeritaAdmin(Context context, List<BeritaModelAdmin> models) {
+    public AdapterBeritaAdmin(Context context, List<BeritaModel> models) {
         this.context = context;
         this.models = models;
         this.dialog = dialog;
@@ -43,8 +43,8 @@ public class AdapterBeritaAdmin extends RecyclerView.Adapter<AdapterBeritaAdmin.
 
     @Override
     public void onBindViewHolder(@NonNull AdapterBeritaAdmin.ViewHolder holder, int position) {
-        BeritaModelAdmin beritaModelAdmin = models.get(position);
-        holder.deskripsi.setText(beritaModelAdmin.getDeskripsi());
+        BeritaModel beritaModel = models.get(position);
+        holder.deskripsi.setText(beritaModel.getDeskripsi());
         Glide.with(context).load(models.get(position).getImage()).into(holder.image);
     }
 

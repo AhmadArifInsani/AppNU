@@ -2,7 +2,6 @@ package com.example.login.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -10,26 +9,26 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.login.R;
-import com.example.login.model.BeritaModel;
+import com.example.login.model.PosterModelAdmin;
 
-public class DetailBerita extends AppCompatActivity {
-    ImageView ImgBack, ImgHome, ImgThumbnail;
-    TextView Title, tvJudul, tvDetail, tvPenulis, tvDate;
-    BeritaModel beritaModel;
+public class DetailPoster extends AppCompatActivity {
+    ImageView ImgBack, ImgHome, ImgProfil, ImgThumbnail;
+    TextView Title, User, Pimpinan, Deskripsi, Date;
+    PosterModelAdmin posterModelAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_berita);
+        setContentView(R.layout.activity_detail_poster);
 
         ImgBack = findViewById(R.id.ibBack);
         ImgHome = findViewById(R.id.ivHomeButton);
         Title = findViewById(R.id.tvTitle);
 
-        Title.setText("Berita Kegiatan");
+        Title.setText("Poster Event");
 
         ImgBack.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), BeritaKegiatan.class));
+            startActivity(new Intent(getApplicationContext(), SosialMediaActivity.class));
         });
 
         ImgHome.setOnClickListener(view -> {
@@ -37,15 +36,13 @@ public class DetailBerita extends AppCompatActivity {
         });
         getData();
     }
-    @SuppressLint("CheckResult")
     public void getData(){
         ImgThumbnail = findViewById(R.id.ivThumbnail);
-        tvJudul = findViewById(R.id.tvJudul);
-        tvDetail = findViewById(R.id.tvDetail);
+        Deskripsi = findViewById(R.id.detail);
 
-        beritaModel = getIntent().getParcelableExtra("BeritaModel");
-        tvJudul.setText(beritaModel.getJudul());
-        tvDetail.setText(beritaModel.getDeskripsi());
-        Glide.with(this).load(beritaModel.getImage()).into(ImgThumbnail);
+        posterModelAdmin = getIntent().getParcelableExtra("PosterModel");
+        Glide.with(this).load(posterModelAdmin.getImage()).into(ImgThumbnail);
+        Deskripsi.setText(posterModelAdmin.getDeskripsi());
+
     }
 }

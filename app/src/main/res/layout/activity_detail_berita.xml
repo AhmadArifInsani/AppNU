@@ -38,7 +38,7 @@
                 tools:src="@drawable/image_organisasi_2" />
 
             <TextView
-                android:id="@+id/tvTitle"
+                android:id="@+id/tvJudul"
                 style="@style/TextAppearance.MaterialComponents.Headline6"
                 android:layout_width="@dimen/dimen_0dp"
                 android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvJudul"
                 tools:text="AWOKDAOKDOAKWODKAWODKOAWKDOAKWODKWAODKWAAOWDKOAKWDOKWA" />
 
             <TextView
