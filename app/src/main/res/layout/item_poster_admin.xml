@@ -7,7 +7,6 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/dimen_16dp"
     android:background="@color/WhiteColor"
-    android:elevation="@dimen/dimen_1dp"
     android:layout_gravity="center_horizontal"
     tools:context=".activity.ItemPosterAdmin">
     <androidx.constraintlayout.widget.ConstraintLayout

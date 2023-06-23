@@ -12,7 +12,7 @@ import com.example.login.R;
 import com.example.login.model.PosterModelAdmin;
 
 public class DetailPoster extends AppCompatActivity {
-    ImageView ImgBack, ImgHome, ImgProfil, ImgThumbnail;
+    ImageView ImgBack, ImgHome, ImgProfil, Image;
     TextView Title, User, Pimpinan, Deskripsi, Date;
     PosterModelAdmin posterModelAdmin;
 
@@ -37,11 +37,11 @@ public class DetailPoster extends AppCompatActivity {
         getData();
     }
     public void getData(){
-        ImgThumbnail = findViewById(R.id.ivThumbnail);
-        Deskripsi = findViewById(R.id.detail);
+        Image = findViewById(R.id.imageDetailPoster);
+        Deskripsi = findViewById(R.id.detailPoster);
 
         posterModelAdmin = getIntent().getParcelableExtra("PosterModel");
-        Glide.with(this).load(posterModelAdmin.getImage()).into(ImgThumbnail);
+        Glide.with(this).load(posterModelAdmin.getImage()).into(Image);
         Deskripsi.setText(posterModelAdmin.getDeskripsi());
 
     }

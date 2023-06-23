@@ -7,26 +7,30 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/dimen_16dp"
     android:background="@color/WhiteColor"
-    android:elevation="@dimen/dimen_1dp"
     android:layout_gravity="center_horizontal">
-    <RelativeLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:gravity="center"
         android:background="@drawable/menu_abu_radius10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
         <TextView
             android:id="@+id/text_aswaja"
             android:layout_width="220dp"
-            android:layout_height="35dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:fontFamily="@font/poppinssemibold"
             android:gravity="center_vertical"
             android:text="Pedoman Administrasi"
             android:textColor="@color/BlackColor"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
         <Button
             android:id="@+id/btn_aswaja"
             android:layout_width="110dp"
@@ -37,7 +41,10 @@
             android:textColor="@color/WhiteColor"
             android:textSize="15sp"
             android:layout_toEndOf="@id/text_aswaja"
-            tools:ignore="TouchTargetSizeCheck" />
-    </RelativeLayout>
+            tools:ignore="TouchTargetSizeCheck"
+            app:layout_constraintTop_toTopOf="@id/text_aswaja"
+            app:layout_constraintBottom_toBottomOf="@id/text_aswaja"
+            app:layout_constraintStart_toEndOf="@id/text_aswaja"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -53,6 +53,10 @@ public class AlumniActivity extends AppCompatActivity {
         models.add(new AlumniModel(R.drawable.person, "Munzilah", "15 Januari 1975", "munzilah@gmail.com", "PAC Sumobito", "+62-856-0762-4258", "1994-1996", "https://wa.me/6285607624258?text=Hi,Is any one Available?"));
         models.add(new AlumniModel(R.drawable.person, "Imam Hambali", "06 Mei 1972", "imamhambali@gmail.com", "PAC Sumobito", "+62-856-0733-3539", "1994-1996", "https://wa.me/6285607333539?text=Hi,Is any one Available?"));
         models.add(new AlumniModel(R.drawable.person, "Muslik", "19 Oktober 1977", "muslik19@gmail.com", "PAC Sumobito", "+62-856-4896-8095", "2000-2003", "https://wa.me/6285648968095?text=Hi,Is any one Available?"));
+        models.add(new AlumniModel(R.drawable.person, "Diana Kurniasari", "03 September 1986", "dianakurniasari@gmail.com", "PAC Sumobito", "+62-856-4941-0768", "2006-2007", "https://wa.me/6285649410768?text=Hi,Is any one Available?"));
+        models.add(new AlumniModel(R.drawable.person, "Ac. Chumaidi", "03 Desember 1970", "chumaidi03@gmail.com", "PAC Sumobito", "+62-857-4591-6443", "1991 - 2004", "https://wa.me/6285745916443?text=Hi,Is any one Available?"));
+        models.add(new AlumniModel(R.drawable.person, "Siti Munawaroh", "03 November 1992", "sitimunawaroh@gmail.com", "PAC Sumobito", "+62-856-4837-3689", "2011-2013", "https://wa.me/6285648373689?text=Hi,Is any one Available?"));
+        models.add(new AlumniModel(R.drawable.person, "Mochammad Fauzan", "09 Pebruari 1985", "mfauzan@gmail.com", "PAC Sumobito", "+62-856-5710-0044", "2009-2011", "https://wa.me/6285657100044?text=Hi,Is any one Available?"));
         setRecyclerView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
