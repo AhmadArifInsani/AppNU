@@ -53,9 +53,10 @@ public class DataAnggotaActivity extends AppCompatActivity {
         models = new ArrayList<>();
         searchView.clearFocus();
 
-        models.add(new DataAnggotaModel(R.drawable.person, "Bayu Satriyo", "07 Oktober 1999", "bayusatriyo@gmail.com", "PR Plosokerep", "+62-853-3622-5993"));
-        models.add(new DataAnggotaModel(R.drawable.person, "Arti Wahyu Ningrum", "10 Juni 2003", "arum10@gmail.com", "PR Plosokerep", "+62-815-5976-5140"));
-        models.add(new DataAnggotaModel(R.drawable.person, "Fiky Firmansyah", "06 Desember 2002", "fikyfirmansyah12@gmail.com", "PR Plosokerep", "+62-877-5577-8954"));
+        //Data Anggota
+        models.add(new DataAnggotaModel(R.drawable.person, "Bayu Satriyo", "07 Oktober 1999", "bayusatriyo@gmail.com", "PR Plosokerep", "+62-853-3622-5993", "https://wa.me/6285336225993?text=Hi,Is any one Available?"));
+        models.add(new DataAnggotaModel(R.drawable.person, "Arti Wahyu Ningrum", "10 Juni 2003", "arum10@gmail.com", "PR Plosokerep", "+62-815-5976-5140", "https://wa.me/6281559765140?text=Hi,Is any one Available?"));
+        models.add(new DataAnggotaModel(R.drawable.person, "Fiky Firmansyah", "06 Desember 2002", "fikyfirmansyah12@gmail.com", "PR Plosokerep", "+62-877-5577-8954", "https://wa.me/6287755778954?text=Hi,Is any one Available?"));
         setRecyclerView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

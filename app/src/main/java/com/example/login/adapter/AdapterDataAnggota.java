@@ -1,5 +1,7 @@
 package com.example.login.adapter;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +50,13 @@ public class AdapterDataAnggota extends RecyclerView.Adapter<AdapterDataAnggota.
         holder.email.setText(dataAnggotaModel.getEmail());
         holder.pimpinan.setText(dataAnggotaModel.getPimpinan());
         holder.nomor.setText(dataAnggotaModel.getNomor());
+        holder.whatsapp.setOnClickListener(view -> {
+            String url = "https://wa.me/" + dataAnggotaModel.getWhatsapp() + "?text=Hi,Is any one Available?";
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(dataAnggotaModel.getWhatsapp()));
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -57,7 +66,7 @@ public class AdapterDataAnggota extends RecyclerView.Adapter<AdapterDataAnggota.
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView nama, birthday, email, pimpinan, nomor;
-        ImageView profil;
+        ImageView profil, whatsapp;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nama = itemView.findViewById(R.id.tvTitle);
@@ -66,6 +75,7 @@ public class AdapterDataAnggota extends RecyclerView.Adapter<AdapterDataAnggota.
             pimpinan = itemView.findViewById(R.id.pimpinan);
             nomor = itemView.findViewById(R.id.nomor_whatsapp);
             profil = itemView.findViewById(R.id.ivThumbnail);
+            whatsapp = itemView.findViewById(R.id.logo_whatsapp);
         }
     }
 }

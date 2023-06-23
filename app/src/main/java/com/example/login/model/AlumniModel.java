@@ -4,19 +4,19 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class AlumniModel implements Parcelable {
-    private String Nama, Delegation, Birthday, Email, Pimpinan, Nomor, UrlNomor, MasaJabatan;
+    private String Nama, Delegation, Birthday, Email, Pimpinan, Nomor, MasaJabatan, Whatsapp;
     private int Profil;
 
-    public AlumniModel(String nama, String delegation, String birthday, String email, String pimpinan, String nomor, String urlNomor, int profil, String MasaJabatan) {
+    public AlumniModel(String nama, String delegation, String birthday, String email, String pimpinan, String nomor, int profil, String MasaJabatan, String whatsapp) {
         this.Nama = nama;
         this.Delegation = delegation;
         this.Birthday = birthday;
         this.Email = email;
         this.Pimpinan = pimpinan;
         this.Nomor = nomor;
-        this.UrlNomor = urlNomor;
         this.Profil = profil;
         this.MasaJabatan = MasaJabatan;
+        this.Whatsapp = whatsapp;
     }
 
     protected AlumniModel(Parcel in) {
@@ -26,9 +26,9 @@ public class AlumniModel implements Parcelable {
         Email = in.readString();
         Pimpinan = in.readString();
         Nomor = in.readString();
-        UrlNomor = in.readString();
         Profil = in.readInt();
         MasaJabatan = in.readString();
+        Whatsapp = in.readString();
     }
 
     public static final Creator<AlumniModel> CREATOR = new Creator<AlumniModel>() {
@@ -43,7 +43,7 @@ public class AlumniModel implements Parcelable {
         }
     };
 
-    public AlumniModel(int profil, String nama, String birthday, String email, String pimpinan, String nomor, String MasaJabatan) {
+    public AlumniModel(int profil, String nama, String birthday, String email, String pimpinan, String nomor, String MasaJabatan, String whatsapp) {
         this.Profil = profil;
         this.Nama = nama;
         this.Birthday = birthday;
@@ -51,6 +51,7 @@ public class AlumniModel implements Parcelable {
         this.Pimpinan = pimpinan;
         this.Nomor = nomor;
         this.MasaJabatan = MasaJabatan;
+        this.Whatsapp = whatsapp;
     }
 
     public String getNama() {
@@ -101,14 +102,6 @@ public class AlumniModel implements Parcelable {
         Nomor = nomor;
     }
 
-    public String getUrlNomor() {
-        return UrlNomor;
-    }
-
-    public void setUrlNomor(String urlNomor) {
-        UrlNomor = urlNomor;
-    }
-
     public int getProfil() {
         return Profil;
     }
@@ -125,6 +118,14 @@ public class AlumniModel implements Parcelable {
         MasaJabatan = masaJabatan;
     }
 
+    public String getWhatsapp() {
+        return Whatsapp;
+    }
+
+    public void setWhatsapp(String whatsapp) {
+        Whatsapp = whatsapp;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -138,7 +139,7 @@ public class AlumniModel implements Parcelable {
         parcel.writeString(Email);
         parcel.writeString(Pimpinan);
         parcel.writeString(Nomor);
-        parcel.writeString(UrlNomor);
         parcel.writeInt(Profil);
+        parcel.writeString(Whatsapp);
     }
 }

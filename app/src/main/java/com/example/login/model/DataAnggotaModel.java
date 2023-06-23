@@ -6,20 +6,20 @@ import android.os.Parcelable;
 import com.google.firestore.v1.Cursor;
 
 public class DataAnggotaModel implements Parcelable {
-    private String Nama, Birthday, Email, Pimpinan, Nomor, UrlNomor;
+    private String Nama, Birthday, Email, Pimpinan, Nomor, Whatsapp;
     private int Profil;
 
     public DataAnggotaModel(){
     }
 
-    public DataAnggotaModel(int profil, String nama, String birthday, String email, String pimpinan, String nomor, String urlNomor) {
+    public DataAnggotaModel(int profil, String nama, String birthday, String email, String pimpinan, String nomor, String whatsapp) {
         this.Profil = profil;
         this.Nama = nama;
         this.Birthday = birthday;
         this.Email = email;
         this.Pimpinan = pimpinan;
         this.Nomor = nomor;
-        this.UrlNomor = urlNomor;
+        this.Whatsapp = whatsapp;
     }
 
     protected DataAnggotaModel(Parcel in) {
@@ -29,7 +29,7 @@ public class DataAnggotaModel implements Parcelable {
         Email = in.readString();
         Pimpinan = in.readString();
         Nomor = in.readString();
-        UrlNomor = in.readString();
+        Whatsapp = in.readString();
     }
 
     public static final Creator<DataAnggotaModel> CREATOR = new Creator<DataAnggotaModel>() {
@@ -101,12 +101,12 @@ public class DataAnggotaModel implements Parcelable {
         Nomor = nomor;
     }
 
-    public String getUrlNomor() {
-        return UrlNomor;
+    public String getWhatsapp() {
+        return Whatsapp;
     }
 
-    public void setUrlNomor(String urlNomor) {
-        UrlNomor = urlNomor;
+    public void setWhatsapp(String whatsapp) {
+        Whatsapp = whatsapp;
     }
 
     @Override
@@ -122,7 +122,7 @@ public class DataAnggotaModel implements Parcelable {
         dest.writeString(Email);
         dest.writeString(Pimpinan);
         dest.writeString(Nomor);
-        dest.writeString(UrlNomor);
+        dest.writeString(Whatsapp);
     }
 
 }

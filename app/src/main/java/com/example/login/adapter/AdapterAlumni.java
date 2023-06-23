@@ -1,5 +1,7 @@
 package com.example.login.adapter;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,12 +28,10 @@ public class AdapterAlumni extends RecyclerView.Adapter<AdapterAlumni.ViewHolder
         this.models = filteredList;
         notifyDataSetChanged();
     }
-
     public AdapterAlumni(Context context, ArrayList<AlumniModel> models) {
         this.context = context;
         this.models = models;
     }
-
     @NonNull
     @Override
     public AdapterAlumni.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -50,6 +50,13 @@ public class AdapterAlumni extends RecyclerView.Adapter<AdapterAlumni.ViewHolder
         holder.pimpinan.setText(alumniModel.getPimpinan());
         holder.nomor.setText(alumniModel.getNomor());
         holder.masaJabatan.setText(alumniModel.getMasaJabatan());
+        holder.whatsapp.setOnClickListener(view -> {
+            String url = "https://wa.me/" + alumniModel.getWhatsapp() + "?text=Hi,Is any one Available?";
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(alumniModel.getWhatsapp()));
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -59,7 +66,7 @@ public class AdapterAlumni extends RecyclerView.Adapter<AdapterAlumni.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView nama, birthday, email, pimpinan, nomor, masaJabatan;
-        ImageView profil;
+        ImageView profil, whatsapp;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             profil = itemView.findViewById(R.id.profilAlumni);
@@ -69,6 +76,7 @@ public class AdapterAlumni extends RecyclerView.Adapter<AdapterAlumni.ViewHolder
             pimpinan = itemView.findViewById(R.id.pimpinanAlumni);
             nomor = itemView.findViewById(R.id.nomorAlumni);
             masaJabatan = itemView.findViewById(R.id.layout_masa_jabatan);
+            whatsapp = itemView.findViewById(R.id.icWhatsappAlumni);
         }
     }
 }
