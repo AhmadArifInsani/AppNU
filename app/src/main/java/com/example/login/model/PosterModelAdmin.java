@@ -7,15 +7,16 @@ import androidx.annotation.NonNull;
 
 public class PosterModelAdmin implements Parcelable {
     private String id, Judul, Deskripsi, Image, UserId;
+    public  PosterModelAdmin(){
 
-    public PosterModelAdmin(){
     }
 
-    public PosterModelAdmin(String judul, String deskripsi, String image, String userIdUploader) {
+    public PosterModelAdmin(String id, String judul, String deskripsi, String image, String userId) {
+        this.id = id;
         this.Judul = judul;
         this.Deskripsi = deskripsi;
         this.Image = image;
-        this.UserId = userIdUploader;
+        this.UserId = userId;
     }
 
     public String getId() {
@@ -85,6 +86,10 @@ public class PosterModelAdmin implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-
+        parcel.writeString(id);
+        parcel.writeString(Judul);
+        parcel.writeString(Deskripsi);
+        parcel.writeString(Image);
+        parcel.writeString(UserId);
     }
 }

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/WhiteColor"
     tools:context=".activity.ProfilActivity">
+
     <include
         android:id="@+id/tbToolbar"
         layout="@layout/layout_toolbar"
@@ -19,12 +20,13 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_15sdp"
-        android:paddingVertical="@dimen/_10sdp"
         android:background="@drawable/menu_abu_radius10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingVertical="@dimen/_10sdp"
         app:layout_constraintBottom_toTopOf="@id/layout_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tbToolbar">
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profil"
             android:layout_width="150dp"
@@ -34,42 +36,44 @@
             app:civ_border_color="@color/abuabu"
             app:civ_border_width="@dimen/_2sdp"
             app:layout_constraintBottom_toTopOf="@id/nama"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/nama"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
-            android:textColor="@color/BlackColor"
-            android:textSize="17sp"
             android:fontFamily="@font/poppinssemibold"
             android:gravity="center"
-            app:layout_constraintStart_toStartOf="@id/profil"
-            app:layout_constraintEnd_toEndOf="@id/profil"
+            android:textColor="@color/BlackColor"
+            android:textSize="17sp"
             app:layout_constraintBottom_toTopOf="@id/nomor"
+            app:layout_constraintEnd_toEndOf="@id/profil"
+            app:layout_constraintStart_toStartOf="@id/profil"
             app:layout_constraintTop_toBottomOf="@id/profil" />
+
         <TextView
             android:id="@+id/nomor"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_marginTop="@dimen/_5sdp"
-            android:textSize="15sp"
-            android:gravity="center"
             android:fontFamily="@font/poppinsmedium"
-            app:layout_constraintStart_toStartOf="@id/profil"
-            app:layout_constraintEnd_toEndOf="@id/profil"
+            android:gravity="center"
+            android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@id/btnEdit"
-            app:layout_constraintTop_toBottomOf="@id/nama"/>
+            app:layout_constraintEnd_toEndOf="@id/profil"
+            app:layout_constraintStart_toStartOf="@id/profil"
+            app:layout_constraintTop_toBottomOf="@id/nama" />
 
         <Button
             android:id="@+id/btnEdit"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_25sdp"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_marginTop="@dimen/_5sdp"
             android:background="@drawable/button"
             android:text="@string/action_edit"
@@ -87,121 +91,127 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
-        android:padding="@dimen/_5sdp"
         android:background="@drawable/menu_abu_radius10"
-        app:layout_constraintTop_toBottomOf="@id/layout_profil"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@id/layout_admin_berita"
         app:layout_constraintEnd_toEndOf="@id/layout_profil"
         app:layout_constraintStart_toStartOf="@id/layout_profil"
-        app:layout_constraintBottom_toTopOf="@id/layout_admin_berita">
+        app:layout_constraintTop_toBottomOf="@id/layout_profil">
+
         <ImageView
             android:id="@+id/ic_email"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
             android:src="@drawable/ic_email"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/text_email"
             app:layout_constraintBottom_toTopOf="@id/ic_location"
-            />
+            app:layout_constraintEnd_toStartOf="@id/text_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/text_email"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:textSize="17sp"
-            app:layout_constraintTop_toTopOf="@id/ic_email"
-            app:layout_constraintStart_toEndOf="@id/ic_email"
             app:layout_constraintBottom_toBottomOf="@id/ic_email"
             app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintStart_toEndOf="@id/ic_email"
+            app:layout_constraintTop_toTopOf="@id/ic_email" />
+
         <ImageView
             android:id="@+id/ic_location"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:src="@drawable/ic_location"
-            app:layout_constraintStart_toStartOf="@id/ic_email"
-            app:layout_constraintTop_toBottomOf="@id/ic_email"
             app:layout_constraintEnd_toStartOf="@id/text_pimpinan"
-            />
+            app:layout_constraintStart_toStartOf="@id/ic_email"
+            app:layout_constraintTop_toBottomOf="@id/ic_email" />
+
         <TextView
             android:id="@+id/text_pimpinan"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:textSize="17sp"
-            app:layout_constraintTop_toTopOf="@id/ic_location"
-            app:layout_constraintStart_toEndOf="@id/ic_location"
             app:layout_constraintBottom_toBottomOf="@id/ic_location"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_location"
+            app:layout_constraintTop_toTopOf="@id/ic_location" />
+
         <ImageView
             android:id="@+id/ic_birthday"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:src="@drawable/ic_birthday"
-            app:layout_constraintStart_toStartOf="@id/ic_email"
-            app:layout_constraintTop_toBottomOf="@id/ic_location"
             app:layout_constraintEnd_toStartOf="@id/text_birthday"
-            />
+            app:layout_constraintStart_toStartOf="@id/ic_email"
+            app:layout_constraintTop_toBottomOf="@id/ic_location" />
+
         <TextView
             android:id="@+id/text_birthday"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:textSize="17sp"
-            app:layout_constraintTop_toTopOf="@id/ic_birthday"
-            app:layout_constraintStart_toEndOf="@id/ic_birthday"
             app:layout_constraintBottom_toBottomOf="@id/ic_birthday"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_birthday"
+            app:layout_constraintTop_toTopOf="@id/ic_birthday" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_admin_berita"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/menu_abu_radius10"
         android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/menu_abu_radius10"
         android:padding="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@id/layout_data"
+        app:layout_constraintBottom_toTopOf="@id/layout_admin_poster"
         app:layout_constraintEnd_toEndOf="@id/layout_profil"
         app:layout_constraintStart_toStartOf="@id/layout_profil"
-        app:layout_constraintBottom_toTopOf="@id/layout_admin_poster">
+        app:layout_constraintTop_toBottomOf="@id/layout_data">
+
         <TextView
             android:id="@+id/text_berita"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:text="Berita Kegiatan"
             android:textSize="20sp"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_admin_poster"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/menu_abu_radius10"
         android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/menu_abu_radius10"
         android:padding="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@id/layout_admin_berita"
         app:layout_constraintEnd_toEndOf="@id/layout_profil"
-        app:layout_constraintStart_toStartOf="@id/layout_profil">
+        app:layout_constraintStart_toStartOf="@id/layout_profil"
+        app:layout_constraintTop_toBottomOf="@id/layout_admin_berita">
+
         <TextView
             android:id="@+id/text_poster"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:text="Poster Event"
             android:textSize="20sp"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
@@ -216,7 +226,7 @@
         android:textColor="@color/WhiteColor"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@id/layout_profil"
-        app:layout_constraintTop_toBottomOf="@id/layout_admin_poster"
-        app:layout_constraintStart_toStartOf="@id/layout_profil"/>
+        app:layout_constraintStart_toStartOf="@id/layout_profil"
+        app:layout_constraintTop_toBottomOf="@id/layout_admin_poster" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

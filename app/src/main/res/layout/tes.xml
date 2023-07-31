@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal">
+
     <include
         android:id="@+id/tbToolbar"
         layout="@layout/layout_toolbar"
@@ -19,9 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center_horizontal"
         app:layout_constraintTop_toBottomOf="@+id/tbToolbar">
 
         <RelativeLayout
@@ -43,9 +43,9 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_below="@id/image_1"
                 android:layout_margin="5dp"
-                android:gravity="center"
-                android:layout_below="@id/image_1">
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -58,6 +58,7 @@
             </RelativeLayout>
 
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/background_2"
             android:layout_width="165dp"
@@ -77,9 +78,9 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_below="@id/image_2"
                 android:layout_margin="5dp"
-                android:gravity="center"
-                android:layout_below="@id/image_2">
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -94,12 +95,13 @@
         </RelativeLayout>
 
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/layout_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:layout_margin="20dp"
+        android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_1">
@@ -123,9 +125,9 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_below="@id/image_3"
                 android:layout_margin="5dp"
-                android:gravity="center"
-                android:layout_below="@id/image_3">
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -138,6 +140,7 @@
             </RelativeLayout>
 
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/background_4"
             android:layout_width="165dp"
@@ -157,9 +160,9 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_below="@id/image_4"
                 android:layout_margin="5dp"
-                android:gravity="center"
-                android:layout_below="@id/image_4">
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"

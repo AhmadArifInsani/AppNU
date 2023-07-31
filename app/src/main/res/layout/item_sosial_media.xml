@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
     android:layout_marginBottom="@dimen/dimen_16dp"
     android:background="@color/WhiteColor"
-    android:layout_gravity="center_horizontal"
     tools:context=".activity.ItemPoster">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/background_1"
         android:layout_width="165dp"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:background="@drawable/menu_abu_radius10"
         android:padding="@dimen/_5sdp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,10 +26,10 @@
             android:layout_centerHorizontal="true"
             android:scaleType="centerCrop"
             android:src="@drawable/image_sosialmedia_1"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvJudulPoster"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/tvJudulPoster"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvJudulPoster"
@@ -42,10 +41,10 @@
             android:textAlignment="center"
             android:textColor="@color/BlackColor"
             android:textSize="8sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivJudulPoster"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivJudulPoster" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

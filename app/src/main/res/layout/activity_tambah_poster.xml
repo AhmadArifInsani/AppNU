@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.TambahPoster">
+
     <include
         android:id="@+id/tbToolbar"
         layout="@layout/layout_toolbar"

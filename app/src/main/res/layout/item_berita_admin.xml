@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:background="@drawable/menu_abu_radius10"
         android:padding="@dimen/dimen_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/ivThumbnailAdm"
@@ -32,12 +32,13 @@
             android:id="@+id/tvTitleAdm"
             style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="@dimen/dimen_0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/dimen_0dp"
             android:layout_marginStart="@dimen/dimen_16dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@id/ivThumbnailAdm"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivThumbnailAdm"
             app:layout_constraintTop_toTopOf="@id/ivThumbnailAdm"
-            app:layout_constraintBottom_toBottomOf="@id/ivThumbnailAdm"
             tools:text="aasdasdsadasdadDKOkasdasdsadasdadDKOkasdasdsadasdadDKOkasdasdsadasdadDKOkasdasdsadasdadDKOksdasdsadasdadDKOk" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

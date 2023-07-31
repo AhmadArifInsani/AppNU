@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.TambahBerita">
+
     <include
         android:id="@+id/tbToolbar"
         layout="@layout/layout_toolbar"
@@ -17,24 +18,25 @@
         android:layout_width="350dp"
         android:layout_height="@dimen/dimen_0dp"
         android:layout_marginTop="@dimen/_15sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/nvNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tbToolbar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/edtImage"
                 android:layout_width="@dimen/_170sdp"
                 android:layout_height="@dimen/_120sdp"
                 android:background="#ccc"
-                android:src="@drawable/ic_image"
                 android:scaleType="centerInside"
-                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_image"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -54,8 +56,9 @@
                     android:hint="@string/label_judul_berita"
                     android:inputType="text|textCapWords"
                     android:minHeight="@dimen/dimen_48dp"
-                    tools:ignore="SpeakableTextPresentCheck"/>
+                    tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilDeskripsi"
                 android:layout_width="0dp"

@@ -9,7 +9,7 @@ public class DataAnggotaModel implements Parcelable {
     private String Nama, Birthday, Email, Pimpinan, Nomor, Whatsapp;
     private int Profil;
 
-    public DataAnggotaModel(){
+    public DataAnggotaModel() {
     }
 
     public DataAnggotaModel(int profil, String nama, String birthday, String email, String pimpinan, String nomor, String whatsapp) {

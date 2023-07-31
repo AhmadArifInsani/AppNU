@@ -83,36 +83,37 @@ public class TambahPoster extends AppCompatActivity {
             selectImage();
         });
         btnSave.setOnClickListener(view -> {
-            if (edtJudul.getText().length()>0 && edtDeskripsi.getText().length()>0){
+            if (edtJudul.getText().length() > 0 && edtDeskripsi.getText().length() > 0) {
                 upload(edtJudul.getText().toString(), edtDeskripsi.getText().toString(), mAuth.getCurrentUser().getUid());
-            }else{
+            } else {
                 Toast.makeText(getApplicationContext(), "Fill in all data!", Toast.LENGTH_SHORT).show();
             }
         });
         Intent intent = getIntent();
-        if (intent != null){
+        if (intent != null) {
             idPoster = intent.getStringExtra("id");
             edtJudul.setText(intent.getStringExtra("Judul"));
             edtDeskripsi.setText(intent.getStringExtra("Deskripsi"));
             Glide.with(getApplicationContext()).load(intent.getStringExtra("Image")).into(edtImage);
         }
     }
-    private void selectImage(){
+
+    private void selectImage() {
         final CharSequence[] items = {"Take Photo", "Choose from Library", "Cancel"};
         AlertDialog.Builder builder = new AlertDialog.Builder(TambahPoster.this);
         builder.setTitle(getString(R.string.app_name));
         builder.setIcon(R.mipmap.ic_launcher);
-        builder.setItems(items, (dialog, item)->{
-           if (items[item].equals("Take Photo")){
-               Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-               startActivityForResult(intent, 10);
-           }else if (items[item].equals("Choose from Library")){
-               Intent intent = new Intent(Intent.ACTION_PICK);
-               intent.setType("image/*");
-               startActivityForResult(Intent.createChooser(intent, "Select Image"), 20);
-           }else if (items[item].equals("Cancel")){
-               dialog.dismiss();
-           }
+        builder.setItems(items, (dialog, item) -> {
+            if (items[item].equals("Take Photo")) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, 10);
+            } else if (items[item].equals("Choose from Library")) {
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType("image/*");
+                startActivityForResult(Intent.createChooser(intent, "Select Image"), 20);
+            } else if (items[item].equals("Cancel")) {
+                dialog.dismiss();
+            }
         });
         builder.show();
     }
@@ -120,33 +121,34 @@ public class TambahPoster extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 20 && resultCode == RESULT_OK && data != null){
+        if (requestCode == 20 && resultCode == RESULT_OK && data != null) {
             final Uri path = data.getData();
             Thread thread = new Thread(() -> {
-               try {
-                   InputStream inputStream = getContentResolver().openInputStream(path);
-                   Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-                   edtImage.post(()->{
-                       edtImage.setImageBitmap(bitmap);
-                   });
-               }catch (IOException e){
-                   e.printStackTrace();
-               }
+                try {
+                    InputStream inputStream = getContentResolver().openInputStream(path);
+                    Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                    edtImage.post(() -> {
+                        edtImage.setImageBitmap(bitmap);
+                    });
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             });
             thread.start();
         }
-        if (requestCode == 10 && resultCode == RESULT_OK){
+        if (requestCode == 10 && resultCode == RESULT_OK) {
             final Bundle extras = data.getExtras();
             Thread thread = new Thread(() -> {
                 Bitmap bitmap = (Bitmap) extras.get("data");
                 edtImage.post(() -> {
-                   edtImage.setImageBitmap(bitmap);
+                    edtImage.setImageBitmap(bitmap);
                 });
             });
             thread.start();
         }
     }
-    private void upload(String judul, String deskripsi, String userIdUploader){
+
+    private void upload(String judul, String deskripsi, String userIdUploader) {
         edtImage.setDrawingCacheEnabled(true);
         edtImage.buildDrawingCache();
         Bitmap bitmap = ((BitmapDrawable) edtImage.getDrawable()).getBitmap();
@@ -166,24 +168,24 @@ public class TambahPoster extends AppCompatActivity {
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                if (taskSnapshot.getMetadata() != null){
-                    if (taskSnapshot.getMetadata().getReference() != null){
+                if (taskSnapshot.getMetadata() != null) {
+                    if (taskSnapshot.getMetadata().getReference() != null) {
                         taskSnapshot.getMetadata().getReference().getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                             @Override
                             public void onComplete(@NonNull Task<Uri> task) {
-                                if (task.getResult() != null){
+                                if (task.getResult() != null) {
                                     saveData(judul, deskripsi, userIdUploader, task.getResult().toString());
-                                }else{
+                                } else {
                                     progressDialog.dismiss();
                                     Toast.makeText(getApplicationContext(), "Failed !", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
-                    }else{
+                    } else {
                         progressDialog.dismiss();
                         Toast.makeText(getApplicationContext(), "Failed !", Toast.LENGTH_SHORT).show();
                     }
-                }else{
+                } else {
                     progressDialog.dismiss();
                     Toast.makeText(getApplicationContext(), "Failed !", Toast.LENGTH_SHORT).show();
                 }
@@ -205,10 +207,10 @@ public class TambahPoster extends AppCompatActivity {
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()){
+                            if (task.isSuccessful()) {
                                 Toast.makeText(getApplicationContext(), "Success !", Toast.LENGTH_SHORT).show();
                                 finish();
-                            }else{
+                            } else {
                                 Toast.makeText(getApplicationContext(), "Failed !", Toast.LENGTH_SHORT).show();
                             }
                         }

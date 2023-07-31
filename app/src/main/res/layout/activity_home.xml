@@ -29,8 +29,6 @@
         android:layout_marginEnd="45dp"
         android:background="@drawable/background_profil"
         android:src="@drawable/person"
-        app:civ_border_color="@color/abuabu"
-        app:civ_border_width="@dimen/_2sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/textView"
         app:layout_constraintBottom_toBottomOf="@id/textView"/>

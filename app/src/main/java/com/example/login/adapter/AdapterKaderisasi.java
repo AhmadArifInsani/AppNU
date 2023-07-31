@@ -17,7 +17,7 @@ import com.example.login.model.KaderisasiModel;
 
 import java.util.ArrayList;
 
-public class AdapterKaderisasi extends RecyclerView.Adapter<AdapterKaderisasi.ViewHolder>{
+public class AdapterKaderisasi extends RecyclerView.Adapter<AdapterKaderisasi.ViewHolder> {
     private final Context context;
     private final ArrayList<KaderisasiModel> models;
 
@@ -30,7 +30,7 @@ public class AdapterKaderisasi extends RecyclerView.Adapter<AdapterKaderisasi.Vi
     @Override
     public AdapterKaderisasi.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.item_kaderisasi,parent,false);
+        View view = layoutInflater.inflate(R.layout.item_kaderisasi, parent, false);
         return new ViewHolder(view);
     }
 

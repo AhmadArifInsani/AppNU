@@ -21,21 +21,24 @@ public class AdapterPosterAdmin extends RecyclerView.Adapter<AdapterPosterAdmin.
     List<PosterModelAdmin> models;
     Dialog dialog;
 
-    public interface Dialog{
+    public interface Dialog {
         void onClick(int pos);
     }
-    public void setDialog(Dialog dialog){
+
+    public void setDialog(Dialog dialog) {
         this.dialog = dialog;
     }
-    public AdapterPosterAdmin(Context context, List<PosterModelAdmin> models){
+
+    public AdapterPosterAdmin(Context context, List<PosterModelAdmin> models) {
         this.context = context;
         this.models = models;
     }
+
     @NonNull
     @Override
     public AdapterPosterAdmin.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.item_poster_admin,parent,false);
+        View view = layoutInflater.inflate(R.layout.item_poster_admin, parent, false);
         return new ViewHolder(view);
     }
 
@@ -50,7 +53,8 @@ public class AdapterPosterAdmin extends RecyclerView.Adapter<AdapterPosterAdmin.
     public int getItemCount() {
         return models.size();
     }
-    public class ViewHolder extends RecyclerView.ViewHolder{
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView judul;
         ImageView image;
 
@@ -61,7 +65,7 @@ public class AdapterPosterAdmin extends RecyclerView.Adapter<AdapterPosterAdmin.
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (dialog!= null){
+                    if (dialog != null) {
                         dialog.onClick(getLayoutPosition());
                     }
                 }

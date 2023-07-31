@@ -8,12 +8,14 @@ import android.widget.TextView;
 public class KaderisasiModel implements Parcelable {
     private String id, nmFile, urlFile;
 
-    public KaderisasiModel(){
+    public KaderisasiModel() {
     }
-    public KaderisasiModel(String nmFile, String urlFile){
+
+    public KaderisasiModel(String nmFile, String urlFile) {
         this.nmFile = nmFile;
         this.urlFile = urlFile;
     }
+
     public KaderisasiModel(Parcel in) {
         id = in.readString();
         nmFile = in.readString();
@@ -32,16 +34,19 @@ public class KaderisasiModel implements Parcelable {
         }
     };
 
-    public String getId(){
+    public String getId() {
         return id;
     }
-    public void setId(String id){
+
+    public void setId(String id) {
         this.id = id;
     }
-    public String getNmFile(){
+
+    public String getNmFile() {
         return nmFile;
     }
-    public String getUrlFile(){
+
+    public String getUrlFile() {
         return urlFile;
     }
 

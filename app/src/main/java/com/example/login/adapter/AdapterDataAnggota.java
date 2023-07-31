@@ -23,7 +23,7 @@ public class AdapterDataAnggota extends RecyclerView.Adapter<AdapterDataAnggota.
     Context context;
     ArrayList<DataAnggotaModel> models;
 
-    public void setFilteredList(ArrayList<DataAnggotaModel> filteredList){
+    public void setFilteredList(ArrayList<DataAnggotaModel> filteredList) {
         this.models = filteredList;
         notifyDataSetChanged();
     }
@@ -37,7 +37,7 @@ public class AdapterDataAnggota extends RecyclerView.Adapter<AdapterDataAnggota.
     @Override
     public AdapterDataAnggota.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.item_data_anggota,parent,false);
+        View view = layoutInflater.inflate(R.layout.item_data_anggota, parent, false);
         return new ViewHolder(view);
     }
 
@@ -67,6 +67,7 @@ public class AdapterDataAnggota extends RecyclerView.Adapter<AdapterDataAnggota.
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView nama, birthday, email, pimpinan, nomor;
         ImageView profil, whatsapp;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nama = itemView.findViewById(R.id.tvTitle);

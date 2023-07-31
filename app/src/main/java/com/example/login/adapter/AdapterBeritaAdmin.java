@@ -20,10 +20,12 @@ public class AdapterBeritaAdmin extends RecyclerView.Adapter<AdapterBeritaAdmin.
     Context context;
     List<BeritaModel> models;
     Dialog dialog;
-    public interface Dialog{
+
+    public interface Dialog {
         void onClick(int pos);
     }
-    public void setDialog(Dialog dialog){
+
+    public void setDialog(Dialog dialog) {
         this.dialog = dialog;
     }
 
@@ -37,14 +39,14 @@ public class AdapterBeritaAdmin extends RecyclerView.Adapter<AdapterBeritaAdmin.
     @Override
     public AdapterBeritaAdmin.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.item_berita_admin,parent,false);
+        View view = layoutInflater.inflate(R.layout.item_berita_admin, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull AdapterBeritaAdmin.ViewHolder holder, int position) {
         BeritaModel beritaModel = models.get(position);
-        holder.deskripsi.setText(beritaModel.getDeskripsi());
+        holder.judul.setText(beritaModel.getJudul());
         Glide.with(context).load(models.get(position).getImage()).into(holder.image);
     }
 
@@ -52,17 +54,19 @@ public class AdapterBeritaAdmin extends RecyclerView.Adapter<AdapterBeritaAdmin.
     public int getItemCount() {
         return models.size();
     }
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView deskripsi;
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView judul;
         ImageView image;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            deskripsi = itemView.findViewById(R.id.tvTitleAdm);
+            judul = itemView.findViewById(R.id.tvTitleAdm);
             image = itemView.findViewById(R.id.ivThumbnailAdm);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (dialog!= null){
+                    if (dialog != null) {
                         dialog.onClick(getLayoutPosition());
                     }
                 }

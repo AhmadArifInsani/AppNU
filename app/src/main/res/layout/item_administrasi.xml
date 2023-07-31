@@ -1,50 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
     android:layout_marginBottom="@dimen/dimen_16dp"
-    android:background="@color/WhiteColor"
-    android:layout_gravity="center_horizontal">
+    android:background="@color/WhiteColor">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:background="@drawable/menu_abu_radius10"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/text_aswaja"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:fontFamily="@font/poppinssemibold"
             android:gravity="center_vertical"
             android:text="Pedoman Administrasi"
             android:textColor="@color/BlackColor"
             android:textSize="17sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
             android:id="@+id/btn_aswaja"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:layout_width="110dp"
             android:layout_height="35dp"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_toEndOf="@id/text_aswaja"
             android:background="@drawable/button_view"
             android:text="@string/action_download"
             android:textColor="@color/WhiteColor"
             android:textSize="15sp"
-            android:layout_toEndOf="@id/text_aswaja"
-            tools:ignore="TouchTargetSizeCheck"
-            app:layout_constraintTop_toTopOf="@id/text_aswaja"
             app:layout_constraintBottom_toBottomOf="@id/text_aswaja"
-            app:layout_constraintStart_toEndOf="@id/text_aswaja"/>
+            app:layout_constraintStart_toEndOf="@id/text_aswaja"
+            app:layout_constraintTop_toTopOf="@id/text_aswaja"
+            tools:ignore="TouchTargetSizeCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@ public class PdfView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_pdf_view);
-        ImgBack= findViewById(R.id.ibBack);
+        ImgBack = findViewById(R.id.ibBack);
 
         ImgBack.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(), KaderisasiActivity.class));
@@ -33,7 +33,8 @@ public class PdfView extends AppCompatActivity {
         setWebView();
 
     }
-    private void setWebView(){
+
+    private void setWebView() {
         webView = findViewById(R.id.webView);
         kaderisasiModel = getIntent().getParcelableExtra("kaderisasiModel");
 

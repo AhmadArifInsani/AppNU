@@ -77,7 +77,7 @@ public class ProfilActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), PosterAdmin.class));
         });
 
-        StorageReference profileRef = storageReference.child("users/"+mAuth.getCurrentUser().getUid()+"profile.jpg");
+        StorageReference profileRef = storageReference.child("users/" + mAuth.getCurrentUser().getUid() + "profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
@@ -89,13 +89,13 @@ public class ProfilActivity extends AppCompatActivity {
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
-                if (documentSnapshot.exists()){
+                if (documentSnapshot.exists()) {
                     TxtName.setText(documentSnapshot.getString("name"));
                     TxtNomorTlp.setText(documentSnapshot.getString("phone"));
                     TxtEmail.setText(documentSnapshot.getString("email"));
                     TxtPimpinan.setText(documentSnapshot.getString("pimpinan"));
                     TxtBirthday.setText(documentSnapshot.getString("birthday"));
-                }else{
+                } else {
                     Log.d("tag", "onEvent : Document do not exists");
                 }
             }

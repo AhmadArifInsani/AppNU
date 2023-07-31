@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_0dp"
         app:layout_constraintBottom_toTopOf="@id/nvNavBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,13 +24,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_15sdp">
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp">
 
             <ImageView
                 android:id="@+id/ivThumbnail"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dimen_0dp"
                 android:scaleType="centerCrop"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 app:layout_constraintDimensionRatio="16:9"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -40,9 +42,10 @@
             <TextView
                 android:id="@+id/tvJudul"
                 style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:layout_width="@dimen/dimen_0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
                 android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,37 +57,13 @@
                 style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="@dimen/dimen_0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvJudul"
                 tools:text="AWOKDAOKDOAKWODKAWODKOAWKDOAKWODKWAODKWAAOWDKOAKWDOKWA" />
 
-            <TextView
-                android:id="@+id/tvWriter"
-                style="@style/TextAppearance.MaterialComponents.Caption"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvDetail"
-                tools:text="Penulis 1" />
-
-            <TextView
-                android:id="@+id/tvDivider"
-                style="@style/TextAppearance.MaterialComponents.Caption"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_divider"
-                app:layout_constraintStart_toEndOf="@id/tvWriter"
-                app:layout_constraintTop_toTopOf="@id/tvWriter" />
-
-            <TextView
-                android:id="@+id/tvCreatedDate"
-                style="@style/TextAppearance.MaterialComponents.Caption"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toEndOf="@id/tvDivider"
-                app:layout_constraintTop_toTopOf="@id/tvDivider"
-                tools:text="Kamis, 25 Desember 2012" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

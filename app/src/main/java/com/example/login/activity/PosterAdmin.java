@@ -37,6 +37,7 @@ public class PosterAdmin extends AppCompatActivity {
     List<PosterModelAdmin> list;
     AdapterPosterAdmin adapter;
     ProgressDialog progressDialog;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class PosterAdmin extends AppCompatActivity {
         setContentView(R.layout.activity_poster_admin);
 
         ImgBack = findViewById(R.id.ibBack);
-        recyclerView =findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         Title = findViewById(R.id.tvTitle);
         ImgAdd = findViewById(R.id.ivAddButton);
 
@@ -68,12 +69,12 @@ public class PosterAdmin extends AppCompatActivity {
                 dialog.setItems(dialogitem, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        switch (i){
+                        switch (i) {
                             case 0:
                                 Intent intent = new Intent(getApplicationContext(), TambahPoster.class);
-                                intent.putExtra("id",  list.get(pos).getId());
-                                intent.putExtra("Judul",  list.get(pos).getJudul());
-                                intent.putExtra("Deskripsi",  list.get(pos).getDeskripsi());
+                                intent.putExtra("id", list.get(pos).getId());
+                                intent.putExtra("Judul", list.get(pos).getJudul());
+                                intent.putExtra("Deskripsi", list.get(pos).getDeskripsi());
                                 intent.putExtra("Image", list.get(pos).getImage());
                                 startActivity(intent);
                                 break;
@@ -96,11 +97,13 @@ public class PosterAdmin extends AppCompatActivity {
         });
 
     }
-    protected void onStart(){
+
+    protected void onStart() {
         super.onStart();
         getData();
     }
-    private void getData(){
+
+    private void getData() {
         progressDialog.show();
         mStore.collection("poster")
                 .whereEqualTo("UserId", mAuth.getCurrentUser().getUid())
@@ -110,28 +113,29 @@ public class PosterAdmin extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         list.clear();
-                        if (task.isSuccessful()){
-                            for (QueryDocumentSnapshot document : task.getResult()){
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
                                 PosterModelAdmin posterModelAdmin = document.toObject(PosterModelAdmin.class);
                                 posterModelAdmin.setId(document.getId());
                                 list.add(posterModelAdmin);
                             }
                             adapter.notifyDataSetChanged();
-                        }else{
+                        } else {
                             Toast.makeText(getApplicationContext(), "Data failed to fetch!", Toast.LENGTH_SHORT).show();
                         }
                         progressDialog.dismiss();
                     }
                 });
     }
-    private void deleteData(String id){
+
+    private void deleteData(String id) {
         progressDialog.show();
         mStore.collection("poster").document(id)
                 .delete()
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if (!task.isSuccessful()){
+                        if (!task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Data failed to delete", Toast.LENGTH_SHORT).show();
                         }
                         progressDialog.dismiss();

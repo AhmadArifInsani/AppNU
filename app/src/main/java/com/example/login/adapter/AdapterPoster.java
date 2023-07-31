@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -27,15 +28,15 @@ public class AdapterPoster extends RecyclerView.Adapter<AdapterPoster.ViewHolder
     Context ctx;
     List<PosterModelAdmin> models;
     LayoutInflater inflater;
-    public interface ItemClickListener{
-        void onItemClick(View v, int pos);
-    }
 
-    public AdapterPoster(Context ctx, List<PosterModelAdmin> models){
+
+
+    public AdapterPoster(Context ctx, List<PosterModelAdmin> models) {
         this.ctx = ctx;
         this.models = models;
         this.inflater = LayoutInflater.from(ctx);
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -44,13 +45,13 @@ public class AdapterPoster extends RecyclerView.Adapter<AdapterPoster.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AdapterPoster.ViewHolder holder, int position) {
         PosterModelAdmin posterModelAdmin = models.get(position);
-        holder.deskripsi.setText(posterModelAdmin.getDeskripsi());
+        holder.judul.setText(posterModelAdmin.getJudul());
         Glide.with(ctx).load(posterModelAdmin.getImage()).into(holder.image);
         holder.image.setOnClickListener(view -> {
             Intent intent = new Intent(ctx, DetailPoster.class);
-            intent.putExtra("PosterModel", posterModelAdmin);
+            intent.putExtra("PosterModelAdmin", posterModelAdmin);
             ctx.startActivity(intent);
         });
     }
@@ -60,13 +61,13 @@ public class AdapterPoster extends RecyclerView.Adapter<AdapterPoster.ViewHolder
         return models.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView deskripsi;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView judul;
         ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            deskripsi = itemView.findViewById(R.id.tvJudulPoster);
+            judul = itemView.findViewById(R.id.tvJudulPoster);
             image = itemView.findViewById(R.id.ivJudulPoster);
         }
     }

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.PosterAdmin">
+
     <include
         android:id="@+id/tbToolbar"
         layout="@layout/layout_toolbar"
@@ -12,16 +13,18 @@
         android:layout_height="@dimen/toolbarHeight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="350dp"
         android:layout_height="@dimen/dimen_0dp"
         android:layout_marginTop="@dimen/_15sdp"
-        tools:listitem="@layout/item_poster_admin"
+        app:layout_constraintBottom_toTopOf="@id/nvNavBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tbToolbar"
-        app:layout_constraintBottom_toTopOf="@id/nvNavBar"/>
+        tools:listitem="@layout/item_poster_admin" />
+
     <include
         android:id="@+id/nvNavBar"
         layout="@layout/layout_bottom_add"

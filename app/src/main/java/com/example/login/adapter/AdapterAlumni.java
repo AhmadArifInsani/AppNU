@@ -24,19 +24,21 @@ public class AdapterAlumni extends RecyclerView.Adapter<AdapterAlumni.ViewHolder
     Context context;
     ArrayList<AlumniModel> models;
 
-    public void setFilteredList(ArrayList<AlumniModel> filteredList){
+    public void setFilteredList(ArrayList<AlumniModel> filteredList) {
         this.models = filteredList;
         notifyDataSetChanged();
     }
+
     public AdapterAlumni(Context context, ArrayList<AlumniModel> models) {
         this.context = context;
         this.models = models;
     }
+
     @NonNull
     @Override
     public AdapterAlumni.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.item_alumni,parent,false);
+        View view = layoutInflater.inflate(R.layout.item_alumni, parent, false);
         return new ViewHolder(view);
     }
 
@@ -67,6 +69,7 @@ public class AdapterAlumni extends RecyclerView.Adapter<AdapterAlumni.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView nama, birthday, email, pimpinan, nomor, masaJabatan;
         ImageView profil, whatsapp;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             profil = itemView.findViewById(R.id.profilAlumni);

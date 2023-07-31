@@ -2,10 +2,12 @@ package com.example.login.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.login.R;
@@ -36,13 +38,14 @@ public class DetailPoster extends AppCompatActivity {
         });
         getData();
     }
+    @SuppressLint("CheckResult")
     public void getData(){
         Image = findViewById(R.id.imageDetailPoster);
         Deskripsi = findViewById(R.id.detailPoster);
 
-        posterModelAdmin = getIntent().getParcelableExtra("PosterModel");
+        posterModelAdmin = getIntent().getParcelableExtra("PosterModelAdmin");
         Glide.with(this).load(posterModelAdmin.getImage()).into(Image);
         Deskripsi.setText(posterModelAdmin.getDeskripsi());
-
+       // Toast.makeText(getApplicationContext(), posterModelAdmin.getImage(), Toast.LENGTH_SHORT).show();
     }
 }

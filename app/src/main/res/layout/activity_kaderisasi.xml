@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/WhiteColor"
     tools:context=".activity.KaderisasiActivity">
+
     <include
         android:id="@+id/tbToolbar"
         layout="@layout/layout_toolbar"

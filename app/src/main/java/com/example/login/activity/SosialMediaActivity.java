@@ -35,8 +35,8 @@ public class SosialMediaActivity extends AppCompatActivity {
     AdapterPoster adapter;
     ProgressDialog progressDialog;
     //List<String> text;
-   // List<Integer> image;
-   // AdapterSosialMedia adapter;
+    // List<Integer> image;
+    // AdapterSosialMedia adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +45,13 @@ public class SosialMediaActivity extends AppCompatActivity {
 
         ImgBack = findViewById(R.id.ibBack);
         ImgHome = findViewById(R.id.ivHomeButton);
-        recyclerView =findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         Title = findViewById(R.id.tvTitle);
 
         mStore = FirebaseFirestore.getInstance();
 
         //text = new ArrayList<>();
-       // image = new ArrayList<>();
+        // image = new ArrayList<>();
 
         Title.setText("Poster Event");
 
@@ -72,11 +72,13 @@ public class SosialMediaActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
     }
-    protected void onStart(){
+
+    protected void onStart() {
         super.onStart();
         getData();
     }
-    private void getData(){
+
+    private void getData() {
         progressDialog.show();
         mStore.collection("poster")
                 .get()
@@ -85,8 +87,8 @@ public class SosialMediaActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         list.clear();
-                        if (task.isSuccessful()){
-                            for (QueryDocumentSnapshot document : task.getResult()){
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
                                 PosterModelAdmin posterModelAdmin = document.toObject(PosterModelAdmin.class);
                                 //PosterModelAdmin posterModelAdmin = new PosterModelAdmin(document.getString("Judul"), document.getString("Deskripsi"), document.getString("Image"));
                                 //    PosterModel posterModel = document.toObject(PosterModel.class);
@@ -95,7 +97,7 @@ public class SosialMediaActivity extends AppCompatActivity {
                                 list.add(posterModelAdmin);
                             }
                             adapter.notifyDataSetChanged();
-                        }else{
+                        } else {
                             Toast.makeText(getApplicationContext(), "Data failed to fetch!", Toast.LENGTH_SHORT).show();
                         }
                         progressDialog.dismiss();

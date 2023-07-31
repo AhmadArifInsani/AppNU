@@ -1,11 +1,13 @@
 package com.example.login.activity;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -63,7 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
             finish();
         });
 
-        if (mAuth.getCurrentUser() != null){
+        if (mAuth.getCurrentUser() != null) {
             userId = mAuth.getCurrentUser().getUid();
         }
 
@@ -78,7 +80,7 @@ public class RegisterActivity extends AppCompatActivity {
                 picker = new DatePickerDialog(RegisterActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
-                        Birthday.setText(dayOfMonth + "/" +(month +1) + "/" + year);
+                        Birthday.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
 
                     }
                 }, year, month, day);
@@ -96,27 +98,23 @@ public class RegisterActivity extends AppCompatActivity {
                 String birthday = Birthday.getText().toString();
                 String pimpinan = Pimpinan.getText().toString();
 
-                if (TextUtils.isEmpty(email)){
+                if (TextUtils.isEmpty(email)) {
                     Email.setError("Email is required");
                     return;
                 }
-                if (TextUtils.isEmpty(password)){
+                if (TextUtils.isEmpty(password)) {
                     Password.setError("Password is required");
-                    return;
-                }
-                if (password.length() < 8){
-                    Password.setError("Password must be >= 8 characters");
                     return;
                 }
 
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             Toast.makeText(RegisterActivity.this, "User created..", Toast.LENGTH_SHORT).show();
                             userId = mAuth.getCurrentUser().getUid();
                             DocumentReference documentReference = mStore.collection("users").document(userId);
-                            Map<String,Object> user = new HashMap<>();
+                            Map<String, Object> user = new HashMap<>();
                             user.put("name", nama);
                             user.put("email", email);
                             user.put("phone", nomorTlp);
@@ -134,7 +132,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 }
                             });
                             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                        }else{
+                        } else {
                             Toast.makeText(RegisterActivity.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -149,5 +147,4 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
-
 }

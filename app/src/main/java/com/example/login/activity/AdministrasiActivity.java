@@ -57,33 +57,15 @@ public class AdministrasiActivity extends AppCompatActivity {
         mStore = FirebaseFirestore.getInstance();
 
         setUpRecyclerView();
-      //  dataFromFirebase();
-        models.add(new AdministrasiModel("Pedoman Administrasi", "gs://appnu-a152e.appspot.com/FileSurat/Pemberitahuan.docx"));
-        models.add(new AdministrasiModel("Surat Rekom", "gs://appnu-a152e.appspot.com/FileSurat/Pemberitahuan.docx"));
-        models.add(new AdministrasiModel("Pengajuan SK", "gs://appnu-a152e.appspot.com/FileSurat/Pemberitahuan.docx"));
-        models.add(new AdministrasiModel("Surat", "gs://appnu-a152e.appspot.com/FileSurat/Pemberitahuan.docx"));
+        models.add(new AdministrasiModel("Surat Pemberitahuan", "https://docs.google.com/document/d/1IjB9yd9Cmjavzm_lRnM0_o8gvK8rotsj/edit?usp=drive_link&ouid=105971814521327400252&rtpof=true&sd=true"));
+        models.add(new AdministrasiModel("Surat Perizinan Tempat", "https://docs.google.com/document/d/1C8-Gdr4d4rbosWzLR-fXF6epxbRS92iM/edit?usp=drive_link&ouid=105971814521327400252&rtpof=true&sd=true"));
+        models.add(new AdministrasiModel("Surat Rekomendasi", "https://docs.google.com/document/d/1C4J8HTPFumaQ1_PGL0fbNhgEeTXPmvh8/edit?usp=drive_link&ouid=105971814521327400252&rtpof=true&sd=true"));
+        models.add(new AdministrasiModel("Surat Tugas IPNU", "https://docs.google.com/document/d/1HtKt5PVt4BnTUTmUXNS8fiChp9pVF_XG/edit?usp=drive_link&ouid=105971814521327400252&rtpof=true&sd=true"));
+        models.add(new AdministrasiModel("Surat Tugas IPPNU", "https://docs.google.com/document/d/1QZNodlIeSfWIUKKt6-dYVblcXFRNG-pL/edit?usp=drive_link&ouid=105971814521327400252&rtpof=true&sd=true"));
+        models.add(new AdministrasiModel("Surat Undangan", "https://docs.google.com/document/d/1hoIClhvJacvDfzw8cwyweKX4LejpPsQ4/edit?usp=drive_link&ouid=105971814521327400252&rtpof=true&sd=true"));
     }
-   /* private void dataFromFirebase(){
-        if (models.size() > 0)
-            models.clear();
-        mStore.collection("administrasi")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        for (DocumentSnapshot documentSnapshot : task.getResult()){
-                            AdministrasiModel administrasiModel = new AdministrasiModel(documentSnapshot.getString("nama"), documentSnapshot.getString("link"));
-                            models.add(administrasiModel);
-                        }
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(AdministrasiActivity.this, "Error..", Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }*/
-    private void setUpRecyclerView(){
+
+    private void setUpRecyclerView() {
         adapterAdministrasi = new AdapterAdministrasi(this, models);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(adapterAdministrasi);

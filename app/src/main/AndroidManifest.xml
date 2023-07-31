@@ -88,8 +88,7 @@
             android:label="Profil" />
         <activity
             android:name=".activity.RegisterActivity"
-            android:exported="true"
-            android:label="Register" />
+            android:exported="true" />
         <activity
             android:name=".activity.LoginActivity"
             android:exported="true"
